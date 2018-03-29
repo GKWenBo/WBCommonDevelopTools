@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C24BBC981F7A863E005F566D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C24BBC971F7A863E005F566D /* main.m */; };
+		C24BBC9B1F7A863E005F566D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C24BBC9A1F7A863E005F566D /* AppDelegate.m */; };
+		C24BBC9E1F7A863E005F566D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24BBC9D1F7A863E005F566D /* ViewController.m */; };
+		C24BBCA11F7A863E005F566D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24BBC9F1F7A863E005F566D /* Main.storyboard */; };
+		C24BBCA31F7A863E005F566D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24BBCA21F7A863E005F566D /* Assets.xcassets */; };
+		C24BBCA61F7A863E005F566D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24BBCA41F7A863E005F566D /* LaunchScreen.storyboard */; };
+		C24BBCB11F7A86C4005F566D /* NSObject+WBRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = C24BBCB01F7A86C4005F566D /* NSObject+WBRuntime.m */; };
+		C24BBCB41F7A87C6005F566D /* UIBarButtonItem+WBCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = C24BBCB31F7A87C6005F566D /* UIBarButtonItem+WBCreate.m */; };
+		C24BBCB71F7A899A005F566D /* UINavigationItem+WBFixSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = C24BBCB61F7A899A005F566D /* UINavigationItem+WBFixSpace.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C24BBC931F7A863E005F566D /* UINavigationItemDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UINavigationItemDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C24BBC971F7A863E005F566D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C24BBC991F7A863E005F566D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C24BBC9A1F7A863E005F566D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C24BBC9C1F7A863E005F566D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C24BBC9D1F7A863E005F566D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C24BBCA01F7A863E005F566D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C24BBCA21F7A863E005F566D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C24BBCA51F7A863E005F566D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C24BBCA71F7A863E005F566D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C24BBCAF1F7A86C4005F566D /* NSObject+WBRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+WBRuntime.h"; sourceTree = "<group>"; };
+		C24BBCB01F7A86C4005F566D /* NSObject+WBRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WBRuntime.m"; sourceTree = "<group>"; };
+		C24BBCB21F7A87C6005F566D /* UIBarButtonItem+WBCreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WBCreate.h"; sourceTree = "<group>"; };
+		C24BBCB31F7A87C6005F566D /* UIBarButtonItem+WBCreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WBCreate.m"; sourceTree = "<group>"; };
+		C24BBCB51F7A899A005F566D /* UINavigationItem+WBFixSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+WBFixSpace.h"; sourceTree = "<group>"; };
+		C24BBCB61F7A899A005F566D /* UINavigationItem+WBFixSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+WBFixSpace.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C24BBC901F7A863E005F566D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C24BBC8A1F7A863E005F566D = {
+			isa = PBXGroup;
+			children = (
+				C24BBC951F7A863E005F566D /* UINavigationItemDemo */,
+				C24BBC941F7A863E005F566D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C24BBC941F7A863E005F566D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C24BBC931F7A863E005F566D /* UINavigationItemDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C24BBC951F7A863E005F566D /* UINavigationItemDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C24BBCAE1F7A86B3005F566D /* NSObject+WBRuntime */,
+				C24BBCAD1F7A8679005F566D /* UIBarButtonItem+WBFixSpacing */,
+				C24BBC991F7A863E005F566D /* AppDelegate.h */,
+				C24BBC9A1F7A863E005F566D /* AppDelegate.m */,
+				C24BBC9C1F7A863E005F566D /* ViewController.h */,
+				C24BBC9D1F7A863E005F566D /* ViewController.m */,
+				C24BBC9F1F7A863E005F566D /* Main.storyboard */,
+				C24BBCA21F7A863E005F566D /* Assets.xcassets */,
+				C24BBCA41F7A863E005F566D /* LaunchScreen.storyboard */,
+				C24BBCA71F7A863E005F566D /* Info.plist */,
+				C24BBC961F7A863E005F566D /* Supporting Files */,
+			);
+			path = UINavigationItemDemo;
+			sourceTree = "<group>";
+		};
+		C24BBC961F7A863E005F566D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C24BBC971F7A863E005F566D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C24BBCAD1F7A8679005F566D /* UIBarButtonItem+WBFixSpacing */ = {
+			isa = PBXGroup;
+			children = (
+				C24BBCB21F7A87C6005F566D /* UIBarButtonItem+WBCreate.h */,
+				C24BBCB31F7A87C6005F566D /* UIBarButtonItem+WBCreate.m */,
+				C24BBCB51F7A899A005F566D /* UINavigationItem+WBFixSpace.h */,
+				C24BBCB61F7A899A005F566D /* UINavigationItem+WBFixSpace.m */,
+			);
+			path = "UIBarButtonItem+WBFixSpacing";
+			sourceTree = "<group>";
+		};
+		C24BBCAE1F7A86B3005F566D /* NSObject+WBRuntime */ = {
+			isa = PBXGroup;
+			children = (
+				C24BBCAF1F7A86C4005F566D /* NSObject+WBRuntime.h */,
+				C24BBCB01F7A86C4005F566D /* NSObject+WBRuntime.m */,
+			);
+			path = "NSObject+WBRuntime";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C24BBC921F7A863E005F566D /* UINavigationItemDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C24BBCAA1F7A863E005F566D /* Build configuration list for PBXNativeTarget "UINavigationItemDemo" */;
+			buildPhases = (
+				C24BBC8F1F7A863E005F566D /* Sources */,
+				C24BBC901F7A863E005F566D /* Frameworks */,
+				C24BBC911F7A863E005F566D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UINavigationItemDemo;
+			productName = UINavigationItemDemo;
+			productReference = C24BBC931F7A863E005F566D /* UINavigationItemDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C24BBC8B1F7A863E005F566D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = WMB;
+				TargetAttributes = {
+					C24BBC921F7A863E005F566D = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C24BBC8E1F7A863E005F566D /* Build configuration list for PBXProject "UINavigationItemDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C24BBC8A1F7A863E005F566D;
+			productRefGroup = C24BBC941F7A863E005F566D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C24BBC921F7A863E005F566D /* UINavigationItemDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C24BBC911F7A863E005F566D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C24BBCA61F7A863E005F566D /* LaunchScreen.storyboard in Resources */,
+				C24BBCA31F7A863E005F566D /* Assets.xcassets in Resources */,
+				C24BBCA11F7A863E005F566D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C24BBC8F1F7A863E005F566D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C24BBC9E1F7A863E005F566D /* ViewController.m in Sources */,
+				C24BBC9B1F7A863E005F566D /* AppDelegate.m in Sources */,
+				C24BBCB71F7A899A005F566D /* UINavigationItem+WBFixSpace.m in Sources */,
+				C24BBC981F7A863E005F566D /* main.m in Sources */,
+				C24BBCB11F7A86C4005F566D /* NSObject+WBRuntime.m in Sources */,
+				C24BBCB41F7A87C6005F566D /* UIBarButtonItem+WBCreate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C24BBC9F1F7A863E005F566D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C24BBCA01F7A863E005F566D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C24BBCA41F7A863E005F566D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C24BBCA51F7A863E005F566D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C24BBCA81F7A863E005F566D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C24BBCA91F7A863E005F566D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C24BBCAB1F7A863E005F566D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UINavigationItemDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = WENBO.UINavigationItemDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C24BBCAC1F7A863E005F566D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UINavigationItemDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = WENBO.UINavigationItemDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C24BBC8E1F7A863E005F566D /* Build configuration list for PBXProject "UINavigationItemDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C24BBCA81F7A863E005F566D /* Debug */,
+				C24BBCA91F7A863E005F566D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C24BBCAA1F7A863E005F566D /* Build configuration list for PBXNativeTarget "UINavigationItemDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C24BBCAB1F7A863E005F566D /* Debug */,
+				C24BBCAC1F7A863E005F566D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C24BBC8B1F7A863E005F566D /* Project object */;
+}

@@ -43,13 +43,6 @@ UIKIT_EXTERN NSString *const kWBVersionKey;
  */
 - (NSString *)wb_getMoneyFormatterWithMoney:(double)money;
 
-/**
- 创建文件名
- 
- @return 文件名
- */
-- (NSString *)wb_createFileName;
-
 #pragma mark ------ < 获取聊天显示时间 > ------
 #pragma mark
 - (NSString *)wb_getMessageDateStringFromTimeInterval:(NSTimeInterval)TimeInterval
@@ -59,6 +52,5 @@ UIKIT_EXTERN NSString *const kWBVersionKey;
 #pragma mark
 /**  < 拆分整数 >  */
 - (NSArray *)getNumberArrayWithNumbers:(NSInteger)number;
-
 
 @end

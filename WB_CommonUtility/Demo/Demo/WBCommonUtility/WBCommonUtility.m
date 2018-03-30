@@ -8,8 +8,6 @@
 
 #import "WBCommonUtility.h"
 
-NSString *const kWBVersionKey = @"kWBVersionKey";
-
 #import "NSArray+WBAdditional.h"
 
 static WBCommonUtility *manager = nil;

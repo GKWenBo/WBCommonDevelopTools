@@ -17,8 +17,7 @@
  */
 + (instancetype)shareManager;
 
-#pragma mark -- 清理缓存
-#pragma mark
+#pragma mark ------ < 获取文件大小 > ------
 /**
  *  获取缓存文件大小
  *
@@ -31,6 +30,15 @@
  *  @param path 路径
  */
 - (NSString *)wb_getFileSizeWithFilePath:(NSString *)path;
+
+/**
+ 获取磁盘可用空间
+
+ @return Size 单位：MB
+ */
+- (NSInteger)wb_getDiskFreeSize;
+
+#pragma mark -- 清理缓存 && 文件操作
 /**
  *  清理cache缓存
  *
@@ -45,8 +53,14 @@
 - (void)wb_clearFileAtPath:(NSString *)path
             completedBlock:(void (^) (BOOL isSuccess))completedBlock;
 
+/**
+ 移除指定文件路径文件
+
+ @param path 文件路径
+ */
+- (BOOL)wb_removeFileAtPath:(NSString *)path;
+
 #pragma mark -- 获取文件路径
-#pragma mark
 /**
  *  获取Document文件路径
  *  用来保存应由程序运行时生成的需要持久化的数据， iTunes会自动备份该目录（苹果公司建议将程序中创建的和浏览过的程序存放在这里，iTunes在备份和回复时会自动包含此目录）
@@ -129,7 +143,6 @@
 - (NSDictionary *)wb_getDictFromCachePath:(NSString *)fileName;
 
 #pragma mark -- NSUserDefaults
-#pragma mark
 /**
  *  系统偏好设置存储数据
  *
@@ -144,5 +157,14 @@
  *  @param key key
  */
 - (id)wb_getValueForKey:(NSString *)key;
+
+#pragma mark ------ < 文件判断 > ------
+/**
+ 判断文件路径是否存在
+
+ @param path 路径名称
+ @return YES/NO
+ */
+- (BOOL)wb_isFileExistAtPath:(NSString *)path;
 
 @end

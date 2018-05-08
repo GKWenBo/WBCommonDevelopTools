@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C201B00E208DB62900749DC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C201B00D208DB62900749DC4 /* AppDelegate.m */; };
+		C201B011208DB62900749DC4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C201B010208DB62900749DC4 /* ViewController.m */; };
+		C201B014208DB62900749DC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C201B012208DB62900749DC4 /* Main.storyboard */; };
+		C201B016208DB62A00749DC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C201B015208DB62A00749DC4 /* Assets.xcassets */; };
+		C201B019208DB62A00749DC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C201B017208DB62A00749DC4 /* LaunchScreen.storyboard */; };
+		C201B01C208DB62A00749DC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C201B01B208DB62A00749DC4 /* main.m */; };
+		C201B026208DB62A00749DC4 /* WBScreenRecorderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C201B025208DB62A00749DC4 /* WBScreenRecorderTests.m */; };
+		C201B031208DB62A00749DC4 /* WBScreenRecorderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C201B030208DB62A00749DC4 /* WBScreenRecorderUITests.m */; };
+		C201B040208DB64500749DC4 /* WBScreenRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = C201B03F208DB64500749DC4 /* WBScreenRecorder.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C201B022208DB62A00749DC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C201B001208DB62900749DC4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C201B008208DB62900749DC4;
+			remoteInfo = WBScreenRecorder;
+		};
+		C201B02D208DB62A00749DC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C201B001208DB62900749DC4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C201B008208DB62900749DC4;
+			remoteInfo = WBScreenRecorder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C201B009208DB62900749DC4 /* WBScreenRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBScreenRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C201B00C208DB62900749DC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C201B00D208DB62900749DC4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C201B00F208DB62900749DC4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C201B010208DB62900749DC4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C201B013208DB62900749DC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C201B015208DB62A00749DC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C201B018208DB62A00749DC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C201B01A208DB62A00749DC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C201B01B208DB62A00749DC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C201B021208DB62A00749DC4 /* WBScreenRecorderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBScreenRecorderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C201B025208DB62A00749DC4 /* WBScreenRecorderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBScreenRecorderTests.m; sourceTree = "<group>"; };
+		C201B027208DB62A00749DC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C201B02C208DB62A00749DC4 /* WBScreenRecorderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBScreenRecorderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C201B030208DB62A00749DC4 /* WBScreenRecorderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBScreenRecorderUITests.m; sourceTree = "<group>"; };
+		C201B032208DB62A00749DC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C201B03E208DB64500749DC4 /* WBScreenRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBScreenRecorder.h; sourceTree = "<group>"; };
+		C201B03F208DB64500749DC4 /* WBScreenRecorder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBScreenRecorder.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C201B006208DB62900749DC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C201B01E208DB62A00749DC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C201B029208DB62A00749DC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C201B000208DB62900749DC4 = {
+			isa = PBXGroup;
+			children = (
+				C201B00B208DB62900749DC4 /* WBScreenRecorder */,
+				C201B024208DB62A00749DC4 /* WBScreenRecorderTests */,
+				C201B02F208DB62A00749DC4 /* WBScreenRecorderUITests */,
+				C201B00A208DB62900749DC4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C201B00A208DB62900749DC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C201B009208DB62900749DC4 /* WBScreenRecorder.app */,
+				C201B021208DB62A00749DC4 /* WBScreenRecorderTests.xctest */,
+				C201B02C208DB62A00749DC4 /* WBScreenRecorderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C201B00B208DB62900749DC4 /* WBScreenRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				C201B00C208DB62900749DC4 /* AppDelegate.h */,
+				C201B00D208DB62900749DC4 /* AppDelegate.m */,
+				C201B00F208DB62900749DC4 /* ViewController.h */,
+				C201B010208DB62900749DC4 /* ViewController.m */,
+				C201B03E208DB64500749DC4 /* WBScreenRecorder.h */,
+				C201B03F208DB64500749DC4 /* WBScreenRecorder.m */,
+				C201B012208DB62900749DC4 /* Main.storyboard */,
+				C201B015208DB62A00749DC4 /* Assets.xcassets */,
+				C201B017208DB62A00749DC4 /* LaunchScreen.storyboard */,
+				C201B01A208DB62A00749DC4 /* Info.plist */,
+				C201B01B208DB62A00749DC4 /* main.m */,
+			);
+			path = WBScreenRecorder;
+			sourceTree = "<group>";
+		};
+		C201B024208DB62A00749DC4 /* WBScreenRecorderTests */ = {
+			isa = PBXGroup;
+			children = (
+				C201B025208DB62A00749DC4 /* WBScreenRecorderTests.m */,
+				C201B027208DB62A00749DC4 /* Info.plist */,
+			);
+			path = WBScreenRecorderTests;
+			sourceTree = "<group>";
+		};
+		C201B02F208DB62A00749DC4 /* WBScreenRecorderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C201B030208DB62A00749DC4 /* WBScreenRecorderUITests.m */,
+				C201B032208DB62A00749DC4 /* Info.plist */,
+			);
+			path = WBScreenRecorderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C201B008208DB62900749DC4 /* WBScreenRecorder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C201B035208DB62A00749DC4 /* Build configuration list for PBXNativeTarget "WBScreenRecorder" */;
+			buildPhases = (
+				C201B005208DB62900749DC4 /* Sources */,
+				C201B006208DB62900749DC4 /* Frameworks */,
+				C201B007208DB62900749DC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WBScreenRecorder;
+			productName = WBScreenRecorder;
+			productReference = C201B009208DB62900749DC4 /* WBScreenRecorder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C201B020208DB62A00749DC4 /* WBScreenRecorderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C201B038208DB62A00749DC4 /* Build configuration list for PBXNativeTarget "WBScreenRecorderTests" */;
+			buildPhases = (
+				C201B01D208DB62A00749DC4 /* Sources */,
+				C201B01E208DB62A00749DC4 /* Frameworks */,
+				C201B01F208DB62A00749DC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C201B023208DB62A00749DC4 /* PBXTargetDependency */,
+			);
+			name = WBScreenRecorderTests;
+			productName = WBScreenRecorderTests;
+			productReference = C201B021208DB62A00749DC4 /* WBScreenRecorderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C201B02B208DB62A00749DC4 /* WBScreenRecorderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C201B03B208DB62A00749DC4 /* Build configuration list for PBXNativeTarget "WBScreenRecorderUITests" */;
+			buildPhases = (
+				C201B028208DB62A00749DC4 /* Sources */,
+				C201B029208DB62A00749DC4 /* Frameworks */,
+				C201B02A208DB62A00749DC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C201B02E208DB62A00749DC4 /* PBXTargetDependency */,
+			);
+			name = WBScreenRecorderUITests;
+			productName = WBScreenRecorderUITests;
+			productReference = C201B02C208DB62A00749DC4 /* WBScreenRecorderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C201B001208DB62900749DC4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = wenbo;
+				TargetAttributes = {
+					C201B008208DB62900749DC4 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					C201B020208DB62A00749DC4 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = C201B008208DB62900749DC4;
+					};
+					C201B02B208DB62A00749DC4 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = C201B008208DB62900749DC4;
+					};
+				};
+			};
+			buildConfigurationList = C201B004208DB62900749DC4 /* Build configuration list for PBXProject "WBScreenRecorder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C201B000208DB62900749DC4;
+			productRefGroup = C201B00A208DB62900749DC4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C201B008208DB62900749DC4 /* WBScreenRecorder */,
+				C201B020208DB62A00749DC4 /* WBScreenRecorderTests */,
+				C201B02B208DB62A00749DC4 /* WBScreenRecorderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C201B007208DB62900749DC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C201B019208DB62A00749DC4 /* LaunchScreen.storyboard in Resources */,
+				C201B016208DB62A00749DC4 /* Assets.xcassets in Resources */,
+				C201B014208DB62900749DC4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C201B01F208DB62A00749DC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C201B02A208DB62A00749DC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C201B005208DB62900749DC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C201B040208DB64500749DC4 /* WBScreenRecorder.m in Sources */,
+				C201B011208DB62900749DC4 /* ViewController.m in Sources */,
+				C201B01C208DB62A00749DC4 /* main.m in Sources */,
+				C201B00E208DB62900749DC4 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C201B01D208DB62A00749DC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C201B026208DB62A00749DC4 /* WBScreenRecorderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C201B028208DB62A00749DC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C201B031208DB62A00749DC4 /* WBScreenRecorderUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C201B023208DB62A00749DC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C201B008208DB62900749DC4 /* WBScreenRecorder */;
+			targetProxy = C201B022208DB62A00749DC4 /* PBXContainerItemProxy */;
+		};
+		C201B02E208DB62A00749DC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C201B008208DB62900749DC4 /* WBScreenRecorder */;
+			targetProxy = C201B02D208DB62A00749DC4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C201B012208DB62900749DC4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C201B013208DB62900749DC4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C201B017208DB62A00749DC4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C201B018208DB62A00749DC4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C201B033208DB62A00749DC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C201B034208DB62A00749DC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C201B036208DB62A00749DC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBScreenRecorder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CYB.WBScreenRecorder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C201B037208DB62A00749DC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBScreenRecorder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CYB.WBScreenRecorder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C201B039208DB62A00749DC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBScreenRecorderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CYB.WBScreenRecorderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WBScreenRecorder.app/WBScreenRecorder";
+			};
+			name = Debug;
+		};
+		C201B03A208DB62A00749DC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBScreenRecorderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CYB.WBScreenRecorderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WBScreenRecorder.app/WBScreenRecorder";
+			};
+			name = Release;
+		};
+		C201B03C208DB62A00749DC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBScreenRecorderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CYB.WBScreenRecorderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WBScreenRecorder;
+			};
+			name = Debug;
+		};
+		C201B03D208DB62A00749DC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBScreenRecorderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CYB.WBScreenRecorderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WBScreenRecorder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C201B004208DB62900749DC4 /* Build configuration list for PBXProject "WBScreenRecorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C201B033208DB62A00749DC4 /* Debug */,
+				C201B034208DB62A00749DC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C201B035208DB62A00749DC4 /* Build configuration list for PBXNativeTarget "WBScreenRecorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C201B036208DB62A00749DC4 /* Debug */,
+				C201B037208DB62A00749DC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C201B038208DB62A00749DC4 /* Build configuration list for PBXNativeTarget "WBScreenRecorderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C201B039208DB62A00749DC4 /* Debug */,
+				C201B03A208DB62A00749DC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C201B03B208DB62A00749DC4 /* Build configuration list for PBXNativeTarget "WBScreenRecorderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C201B03C208DB62A00749DC4 /* Debug */,
+				C201B03D208DB62A00749DC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C201B001208DB62900749DC4 /* Project object */;
+}

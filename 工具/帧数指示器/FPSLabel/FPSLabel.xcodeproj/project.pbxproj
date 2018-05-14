@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C2F37C0020A9399F00577E00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F37BFF20A9399F00577E00 /* AppDelegate.m */; };
+		C2F37C0320A9399F00577E00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F37C0220A9399F00577E00 /* ViewController.m */; };
+		C2F37C0620A9399F00577E00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2F37C0420A9399F00577E00 /* Main.storyboard */; };
+		C2F37C0820A939A100577E00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2F37C0720A939A100577E00 /* Assets.xcassets */; };
+		C2F37C0B20A939A100577E00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2F37C0920A939A100577E00 /* LaunchScreen.storyboard */; };
+		C2F37C0E20A939A100577E00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F37C0D20A939A100577E00 /* main.m */; };
+		C2F37C1820A939A100577E00 /* FPSLabelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F37C1720A939A100577E00 /* FPSLabelTests.m */; };
+		C2F37C2320A939A100577E00 /* FPSLabelUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F37C2220A939A100577E00 /* FPSLabelUITests.m */; };
+		C2F37C3620A939D400577E00 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F37C3520A939D300577E00 /* YYFPSLabel.m */; };
+		C2F37C3920A93B6500577E00 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F37C3820A93B6500577E00 /* YYWeakProxy.m */; };
+		C2F37C3C20A942BB00577E00 /* UIView+WBFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F37C3A20A942BA00577E00 /* UIView+WBFrame.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2F37C1420A939A100577E00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2F37BF320A9399F00577E00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2F37BFA20A9399F00577E00;
+			remoteInfo = FPSLabel;
+		};
+		C2F37C1F20A939A100577E00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2F37BF320A9399F00577E00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2F37BFA20A9399F00577E00;
+			remoteInfo = FPSLabel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C2F37BFB20A9399F00577E00 /* FPSLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FPSLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F37BFE20A9399F00577E00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C2F37BFF20A9399F00577E00 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C2F37C0120A9399F00577E00 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C2F37C0220A9399F00577E00 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C2F37C0520A9399F00577E00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C2F37C0720A939A100577E00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2F37C0A20A939A100577E00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C2F37C0C20A939A100577E00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2F37C0D20A939A100577E00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C2F37C1320A939A100577E00 /* FPSLabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FPSLabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F37C1720A939A100577E00 /* FPSLabelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPSLabelTests.m; sourceTree = "<group>"; };
+		C2F37C1920A939A100577E00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2F37C1E20A939A100577E00 /* FPSLabelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FPSLabelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F37C2220A939A100577E00 /* FPSLabelUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPSLabelUITests.m; sourceTree = "<group>"; };
+		C2F37C2420A939A100577E00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2F37C3420A939D300577E00 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		C2F37C3520A939D300577E00 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		C2F37C3720A93B6500577E00 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		C2F37C3820A93B6500577E00 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
+		C2F37C3A20A942BA00577E00 /* UIView+WBFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WBFrame.m"; sourceTree = "<group>"; };
+		C2F37C3B20A942BB00577E00 /* UIView+WBFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WBFrame.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2F37BF820A9399F00577E00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2F37C1020A939A100577E00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2F37C1B20A939A100577E00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C2F37BF220A9399F00577E00 = {
+			isa = PBXGroup;
+			children = (
+				C2F37BFD20A9399F00577E00 /* FPSLabel */,
+				C2F37C1620A939A100577E00 /* FPSLabelTests */,
+				C2F37C2120A939A100577E00 /* FPSLabelUITests */,
+				C2F37BFC20A9399F00577E00 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C2F37BFC20A9399F00577E00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2F37BFB20A9399F00577E00 /* FPSLabel.app */,
+				C2F37C1320A939A100577E00 /* FPSLabelTests.xctest */,
+				C2F37C1E20A939A100577E00 /* FPSLabelUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2F37BFD20A9399F00577E00 /* FPSLabel */ = {
+			isa = PBXGroup;
+			children = (
+				C2F37C3320A939D300577E00 /* YYFPSLabel */,
+				C2F37BFE20A9399F00577E00 /* AppDelegate.h */,
+				C2F37BFF20A9399F00577E00 /* AppDelegate.m */,
+				C2F37C0120A9399F00577E00 /* ViewController.h */,
+				C2F37C0220A9399F00577E00 /* ViewController.m */,
+				C2F37C3B20A942BB00577E00 /* UIView+WBFrame.h */,
+				C2F37C3A20A942BA00577E00 /* UIView+WBFrame.m */,
+				C2F37C0420A9399F00577E00 /* Main.storyboard */,
+				C2F37C0720A939A100577E00 /* Assets.xcassets */,
+				C2F37C0920A939A100577E00 /* LaunchScreen.storyboard */,
+				C2F37C0C20A939A100577E00 /* Info.plist */,
+				C2F37C0D20A939A100577E00 /* main.m */,
+			);
+			path = FPSLabel;
+			sourceTree = "<group>";
+		};
+		C2F37C1620A939A100577E00 /* FPSLabelTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2F37C1720A939A100577E00 /* FPSLabelTests.m */,
+				C2F37C1920A939A100577E00 /* Info.plist */,
+			);
+			path = FPSLabelTests;
+			sourceTree = "<group>";
+		};
+		C2F37C2120A939A100577E00 /* FPSLabelUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C2F37C2220A939A100577E00 /* FPSLabelUITests.m */,
+				C2F37C2420A939A100577E00 /* Info.plist */,
+			);
+			path = FPSLabelUITests;
+			sourceTree = "<group>";
+		};
+		C2F37C3320A939D300577E00 /* YYFPSLabel */ = {
+			isa = PBXGroup;
+			children = (
+				C2F37C3720A93B6500577E00 /* YYWeakProxy.h */,
+				C2F37C3820A93B6500577E00 /* YYWeakProxy.m */,
+				C2F37C3420A939D300577E00 /* YYFPSLabel.h */,
+				C2F37C3520A939D300577E00 /* YYFPSLabel.m */,
+			);
+			path = YYFPSLabel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2F37BFA20A9399F00577E00 /* FPSLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2F37C2720A939A100577E00 /* Build configuration list for PBXNativeTarget "FPSLabel" */;
+			buildPhases = (
+				C2F37BF720A9399F00577E00 /* Sources */,
+				C2F37BF820A9399F00577E00 /* Frameworks */,
+				C2F37BF920A9399F00577E00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FPSLabel;
+			productName = FPSLabel;
+			productReference = C2F37BFB20A9399F00577E00 /* FPSLabel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2F37C1220A939A100577E00 /* FPSLabelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2F37C2A20A939A100577E00 /* Build configuration list for PBXNativeTarget "FPSLabelTests" */;
+			buildPhases = (
+				C2F37C0F20A939A100577E00 /* Sources */,
+				C2F37C1020A939A100577E00 /* Frameworks */,
+				C2F37C1120A939A100577E00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2F37C1520A939A100577E00 /* PBXTargetDependency */,
+			);
+			name = FPSLabelTests;
+			productName = FPSLabelTests;
+			productReference = C2F37C1320A939A100577E00 /* FPSLabelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C2F37C1D20A939A100577E00 /* FPSLabelUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2F37C2D20A939A100577E00 /* Build configuration list for PBXNativeTarget "FPSLabelUITests" */;
+			buildPhases = (
+				C2F37C1A20A939A100577E00 /* Sources */,
+				C2F37C1B20A939A100577E00 /* Frameworks */,
+				C2F37C1C20A939A100577E00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2F37C2020A939A100577E00 /* PBXTargetDependency */,
+			);
+			name = FPSLabelUITests;
+			productName = FPSLabelUITests;
+			productReference = C2F37C1E20A939A100577E00 /* FPSLabelUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2F37BF320A9399F00577E00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = wenbo;
+				TargetAttributes = {
+					C2F37BFA20A9399F00577E00 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					C2F37C1220A939A100577E00 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = C2F37BFA20A9399F00577E00;
+					};
+					C2F37C1D20A939A100577E00 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = C2F37BFA20A9399F00577E00;
+					};
+				};
+			};
+			buildConfigurationList = C2F37BF620A9399F00577E00 /* Build configuration list for PBXProject "FPSLabel" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2F37BF220A9399F00577E00;
+			productRefGroup = C2F37BFC20A9399F00577E00 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2F37BFA20A9399F00577E00 /* FPSLabel */,
+				C2F37C1220A939A100577E00 /* FPSLabelTests */,
+				C2F37C1D20A939A100577E00 /* FPSLabelUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2F37BF920A9399F00577E00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2F37C0B20A939A100577E00 /* LaunchScreen.storyboard in Resources */,
+				C2F37C0820A939A100577E00 /* Assets.xcassets in Resources */,
+				C2F37C0620A9399F00577E00 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2F37C1120A939A100577E00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2F37C1C20A939A100577E00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2F37BF720A9399F00577E00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2F37C0320A9399F00577E00 /* ViewController.m in Sources */,
+				C2F37C0E20A939A100577E00 /* main.m in Sources */,
+				C2F37C3620A939D400577E00 /* YYFPSLabel.m in Sources */,
+				C2F37C0020A9399F00577E00 /* AppDelegate.m in Sources */,
+				C2F37C3920A93B6500577E00 /* YYWeakProxy.m in Sources */,
+				C2F37C3C20A942BB00577E00 /* UIView+WBFrame.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2F37C0F20A939A100577E00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2F37C1820A939A100577E00 /* FPSLabelTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2F37C1A20A939A100577E00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2F37C2320A939A100577E00 /* FPSLabelUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2F37C1520A939A100577E00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2F37BFA20A9399F00577E00 /* FPSLabel */;
+			targetProxy = C2F37C1420A939A100577E00 /* PBXContainerItemProxy */;
+		};
+		C2F37C2020A939A100577E00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2F37BFA20A9399F00577E00 /* FPSLabel */;
+			targetProxy = C2F37C1F20A939A100577E00 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C2F37C0420A9399F00577E00 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2F37C0520A9399F00577E00 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C2F37C0920A939A100577E00 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2F37C0A20A939A100577E00 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C2F37C2520A939A100577E00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C2F37C2620A939A100577E00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2F37C2820A939A100577E00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FPSLabel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CYB.FPSLabel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C2F37C2920A939A100577E00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FPSLabel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CYB.FPSLabel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C2F37C2B20A939A100577E00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FPSLabelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CYB.FPSLabelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FPSLabel.app/FPSLabel";
+			};
+			name = Debug;
+		};
+		C2F37C2C20A939A100577E00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FPSLabelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CYB.FPSLabelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FPSLabel.app/FPSLabel";
+			};
+			name = Release;
+		};
+		C2F37C2E20A939A100577E00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FPSLabelUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CYB.FPSLabelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FPSLabel;
+			};
+			name = Debug;
+		};
+		C2F37C2F20A939A100577E00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FPSLabelUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CYB.FPSLabelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FPSLabel;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2F37BF620A9399F00577E00 /* Build configuration list for PBXProject "FPSLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2F37C2520A939A100577E00 /* Debug */,
+				C2F37C2620A939A100577E00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2F37C2720A939A100577E00 /* Build configuration list for PBXNativeTarget "FPSLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2F37C2820A939A100577E00 /* Debug */,
+				C2F37C2920A939A100577E00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2F37C2A20A939A100577E00 /* Build configuration list for PBXNativeTarget "FPSLabelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2F37C2B20A939A100577E00 /* Debug */,
+				C2F37C2C20A939A100577E00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2F37C2D20A939A100577E00 /* Build configuration list for PBXNativeTarget "FPSLabelUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2F37C2E20A939A100577E00 /* Debug */,
+				C2F37C2F20A939A100577E00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2F37BF320A9399F00577E00 /* Project object */;
+}

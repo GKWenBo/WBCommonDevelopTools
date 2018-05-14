@@ -18,6 +18,7 @@
             (__bridge_transfer id)kSecAttrAccessibleAfterFirstUnlock,(__bridge_transfer id)kSecAttrAccessible,
             nil];
 }
+
 + (void)saveServer:(NSString *)service data:(id)data {
     //Get search dictionary
     NSMutableDictionary *keychainQuery = [self getKeychainQuery:service];
@@ -28,6 +29,7 @@
     //Add item to keychain with the search dictionary
     SecItemAdd((__bridge_retained CFDictionaryRef)keychainQuery, NULL);
 }
+
 + (id)loadServer:(NSString *)service {
     id ret = nil;
     NSMutableDictionary *keychainQuery = [self getKeychainQuery:service];
@@ -45,6 +47,7 @@
     }
     return ret;
 }
+
 + (void)deleteServer:(NSString *)service {
     NSMutableDictionary *keychainQuery = [self getKeychainQuery:service];
     SecItemDelete((__bridge_retained CFDictionaryRef)keychainQuery);

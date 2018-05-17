@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C294CFF220AC31C200E5AE06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C294CFF120AC31C200E5AE06 /* AppDelegate.m */; };
+		C294CFF520AC31C200E5AE06 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C294CFF420AC31C200E5AE06 /* ViewController.m */; };
+		C294CFF820AC31C200E5AE06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C294CFF620AC31C200E5AE06 /* Main.storyboard */; };
+		C294CFFA20AC31C300E5AE06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C294CFF920AC31C300E5AE06 /* Assets.xcassets */; };
+		C294CFFD20AC31C300E5AE06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C294CFFB20AC31C300E5AE06 /* LaunchScreen.storyboard */; };
+		C294D00020AC31C300E5AE06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C294CFFF20AC31C300E5AE06 /* main.m */; };
+		C294D00A20AC31C400E5AE06 /* WBDateFormatterPoolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C294D00920AC31C400E5AE06 /* WBDateFormatterPoolTests.m */; };
+		C294D01520AC31C400E5AE06 /* WBDateFormatterPoolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C294D01420AC31C400E5AE06 /* WBDateFormatterPoolUITests.m */; };
+		C2D1C36220AD746F00D1EB39 /* WBDateFormatterPool.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D1C36020AD746F00D1EB39 /* WBDateFormatterPool.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C294D00620AC31C400E5AE06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C294CFE520AC31C200E5AE06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C294CFEC20AC31C200E5AE06;
+			remoteInfo = WBDateFormatterPool;
+		};
+		C294D01120AC31C400E5AE06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C294CFE520AC31C200E5AE06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C294CFEC20AC31C200E5AE06;
+			remoteInfo = WBDateFormatterPool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C294CFED20AC31C200E5AE06 /* WBDateFormatterPool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBDateFormatterPool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C294CFF020AC31C200E5AE06 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C294CFF120AC31C200E5AE06 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C294CFF320AC31C200E5AE06 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C294CFF420AC31C200E5AE06 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C294CFF720AC31C200E5AE06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C294CFF920AC31C300E5AE06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C294CFFC20AC31C300E5AE06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C294CFFE20AC31C300E5AE06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C294CFFF20AC31C300E5AE06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C294D00520AC31C400E5AE06 /* WBDateFormatterPoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBDateFormatterPoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C294D00920AC31C400E5AE06 /* WBDateFormatterPoolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBDateFormatterPoolTests.m; sourceTree = "<group>"; };
+		C294D00B20AC31C400E5AE06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C294D01020AC31C400E5AE06 /* WBDateFormatterPoolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBDateFormatterPoolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C294D01420AC31C400E5AE06 /* WBDateFormatterPoolUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBDateFormatterPoolUITests.m; sourceTree = "<group>"; };
+		C294D01620AC31C400E5AE06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2D1C36020AD746F00D1EB39 /* WBDateFormatterPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBDateFormatterPool.m; sourceTree = "<group>"; };
+		C2D1C36120AD746F00D1EB39 /* WBDateFormatterPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBDateFormatterPool.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C294CFEA20AC31C200E5AE06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C294D00220AC31C400E5AE06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C294D00D20AC31C400E5AE06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C294CFE420AC31C200E5AE06 = {
+			isa = PBXGroup;
+			children = (
+				C294CFEF20AC31C200E5AE06 /* WBDateFormatterPool */,
+				C294D00820AC31C400E5AE06 /* WBDateFormatterPoolTests */,
+				C294D01320AC31C400E5AE06 /* WBDateFormatterPoolUITests */,
+				C294CFEE20AC31C200E5AE06 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C294CFEE20AC31C200E5AE06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C294CFED20AC31C200E5AE06 /* WBDateFormatterPool.app */,
+				C294D00520AC31C400E5AE06 /* WBDateFormatterPoolTests.xctest */,
+				C294D01020AC31C400E5AE06 /* WBDateFormatterPoolUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C294CFEF20AC31C200E5AE06 /* WBDateFormatterPool */ = {
+			isa = PBXGroup;
+			children = (
+				C2D1C36120AD746F00D1EB39 /* WBDateFormatterPool.h */,
+				C2D1C36020AD746F00D1EB39 /* WBDateFormatterPool.m */,
+				C294CFF020AC31C200E5AE06 /* AppDelegate.h */,
+				C294CFF120AC31C200E5AE06 /* AppDelegate.m */,
+				C294CFF320AC31C200E5AE06 /* ViewController.h */,
+				C294CFF420AC31C200E5AE06 /* ViewController.m */,
+				C294CFF620AC31C200E5AE06 /* Main.storyboard */,
+				C294CFF920AC31C300E5AE06 /* Assets.xcassets */,
+				C294CFFB20AC31C300E5AE06 /* LaunchScreen.storyboard */,
+				C294CFFE20AC31C300E5AE06 /* Info.plist */,
+				C294CFFF20AC31C300E5AE06 /* main.m */,
+			);
+			path = WBDateFormatterPool;
+			sourceTree = "<group>";
+		};
+		C294D00820AC31C400E5AE06 /* WBDateFormatterPoolTests */ = {
+			isa = PBXGroup;
+			children = (
+				C294D00920AC31C400E5AE06 /* WBDateFormatterPoolTests.m */,
+				C294D00B20AC31C400E5AE06 /* Info.plist */,
+			);
+			path = WBDateFormatterPoolTests;
+			sourceTree = "<group>";
+		};
+		C294D01320AC31C400E5AE06 /* WBDateFormatterPoolUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C294D01420AC31C400E5AE06 /* WBDateFormatterPoolUITests.m */,
+				C294D01620AC31C400E5AE06 /* Info.plist */,
+			);
+			path = WBDateFormatterPoolUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C294CFEC20AC31C200E5AE06 /* WBDateFormatterPool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C294D01920AC31C400E5AE06 /* Build configuration list for PBXNativeTarget "WBDateFormatterPool" */;
+			buildPhases = (
+				C294CFE920AC31C200E5AE06 /* Sources */,
+				C294CFEA20AC31C200E5AE06 /* Frameworks */,
+				C294CFEB20AC31C200E5AE06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WBDateFormatterPool;
+			productName = WBDateFormatterPool;
+			productReference = C294CFED20AC31C200E5AE06 /* WBDateFormatterPool.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C294D00420AC31C400E5AE06 /* WBDateFormatterPoolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C294D01C20AC31C400E5AE06 /* Build configuration list for PBXNativeTarget "WBDateFormatterPoolTests" */;
+			buildPhases = (
+				C294D00120AC31C400E5AE06 /* Sources */,
+				C294D00220AC31C400E5AE06 /* Frameworks */,
+				C294D00320AC31C400E5AE06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C294D00720AC31C400E5AE06 /* PBXTargetDependency */,
+			);
+			name = WBDateFormatterPoolTests;
+			productName = WBDateFormatterPoolTests;
+			productReference = C294D00520AC31C400E5AE06 /* WBDateFormatterPoolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C294D00F20AC31C400E5AE06 /* WBDateFormatterPoolUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C294D01F20AC31C400E5AE06 /* Build configuration list for PBXNativeTarget "WBDateFormatterPoolUITests" */;
+			buildPhases = (
+				C294D00C20AC31C400E5AE06 /* Sources */,
+				C294D00D20AC31C400E5AE06 /* Frameworks */,
+				C294D00E20AC31C400E5AE06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C294D01220AC31C400E5AE06 /* PBXTargetDependency */,
+			);
+			name = WBDateFormatterPoolUITests;
+			productName = WBDateFormatterPoolUITests;
+			productReference = C294D01020AC31C400E5AE06 /* WBDateFormatterPoolUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C294CFE520AC31C200E5AE06 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = wenbo;
+				TargetAttributes = {
+					C294CFEC20AC31C200E5AE06 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					C294D00420AC31C400E5AE06 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = C294CFEC20AC31C200E5AE06;
+					};
+					C294D00F20AC31C400E5AE06 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = C294CFEC20AC31C200E5AE06;
+					};
+				};
+			};
+			buildConfigurationList = C294CFE820AC31C200E5AE06 /* Build configuration list for PBXProject "WBDateFormatterPool" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C294CFE420AC31C200E5AE06;
+			productRefGroup = C294CFEE20AC31C200E5AE06 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C294CFEC20AC31C200E5AE06 /* WBDateFormatterPool */,
+				C294D00420AC31C400E5AE06 /* WBDateFormatterPoolTests */,
+				C294D00F20AC31C400E5AE06 /* WBDateFormatterPoolUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C294CFEB20AC31C200E5AE06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C294CFFD20AC31C300E5AE06 /* LaunchScreen.storyboard in Resources */,
+				C294CFFA20AC31C300E5AE06 /* Assets.xcassets in Resources */,
+				C294CFF820AC31C200E5AE06 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C294D00320AC31C400E5AE06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C294D00E20AC31C400E5AE06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C294CFE920AC31C200E5AE06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C294CFF520AC31C200E5AE06 /* ViewController.m in Sources */,
+				C2D1C36220AD746F00D1EB39 /* WBDateFormatterPool.m in Sources */,
+				C294D00020AC31C300E5AE06 /* main.m in Sources */,
+				C294CFF220AC31C200E5AE06 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C294D00120AC31C400E5AE06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C294D00A20AC31C400E5AE06 /* WBDateFormatterPoolTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C294D00C20AC31C400E5AE06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C294D01520AC31C400E5AE06 /* WBDateFormatterPoolUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C294D00720AC31C400E5AE06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C294CFEC20AC31C200E5AE06 /* WBDateFormatterPool */;
+			targetProxy = C294D00620AC31C400E5AE06 /* PBXContainerItemProxy */;
+		};
+		C294D01220AC31C400E5AE06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C294CFEC20AC31C200E5AE06 /* WBDateFormatterPool */;
+			targetProxy = C294D01120AC31C400E5AE06 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C294CFF620AC31C200E5AE06 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C294CFF720AC31C200E5AE06 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C294CFFB20AC31C300E5AE06 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C294CFFC20AC31C300E5AE06 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C294D01720AC31C400E5AE06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C294D01820AC31C400E5AE06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C294D01A20AC31C400E5AE06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBDateFormatterPool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CYB.WBDateFormatterPool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C294D01B20AC31C400E5AE06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBDateFormatterPool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CYB.WBDateFormatterPool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C294D01D20AC31C400E5AE06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBDateFormatterPoolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CYB.WBDateFormatterPoolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WBDateFormatterPool.app/WBDateFormatterPool";
+			};
+			name = Debug;
+		};
+		C294D01E20AC31C400E5AE06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBDateFormatterPoolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CYB.WBDateFormatterPoolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WBDateFormatterPool.app/WBDateFormatterPool";
+			};
+			name = Release;
+		};
+		C294D02020AC31C400E5AE06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBDateFormatterPoolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CYB.WBDateFormatterPoolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WBDateFormatterPool;
+			};
+			name = Debug;
+		};
+		C294D02120AC31C400E5AE06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBDateFormatterPoolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CYB.WBDateFormatterPoolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WBDateFormatterPool;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C294CFE820AC31C200E5AE06 /* Build configuration list for PBXProject "WBDateFormatterPool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C294D01720AC31C400E5AE06 /* Debug */,
+				C294D01820AC31C400E5AE06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C294D01920AC31C400E5AE06 /* Build configuration list for PBXNativeTarget "WBDateFormatterPool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C294D01A20AC31C400E5AE06 /* Debug */,
+				C294D01B20AC31C400E5AE06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C294D01C20AC31C400E5AE06 /* Build configuration list for PBXNativeTarget "WBDateFormatterPoolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C294D01D20AC31C400E5AE06 /* Debug */,
+				C294D01E20AC31C400E5AE06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C294D01F20AC31C400E5AE06 /* Build configuration list for PBXNativeTarget "WBDateFormatterPoolUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C294D02020AC31C400E5AE06 /* Debug */,
+				C294D02120AC31C400E5AE06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C294CFE520AC31C200E5AE06 /* Project object */;
+}

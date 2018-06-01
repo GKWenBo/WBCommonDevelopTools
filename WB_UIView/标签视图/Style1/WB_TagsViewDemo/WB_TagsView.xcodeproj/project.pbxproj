@@ -13,6 +13,7 @@
 		C21C130C1F64E2A200E38781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C21C130A1F64E2A200E38781 /* Main.storyboard */; };
 		C21C130E1F64E2A200E38781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C21C130D1F64E2A200E38781 /* Assets.xcassets */; };
 		C21C13111F64E2A200E38781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C21C130F1F64E2A200E38781 /* LaunchScreen.storyboard */; };
+		C2CFBF3B20C0E60B00DEBD20 /* WBTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C235E7521F77C999006A0EDF /* WBTagsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -163,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C21C13091F64E2A200E38781 /* ViewController.m in Sources */,
+				C2CFBF3B20C0E60B00DEBD20 /* WBTagsView.m in Sources */,
 				C21C13061F64E2A200E38781 /* AppDelegate.m in Sources */,
 				C21C13031F64E2A200E38781 /* main.m in Sources */,
 			);

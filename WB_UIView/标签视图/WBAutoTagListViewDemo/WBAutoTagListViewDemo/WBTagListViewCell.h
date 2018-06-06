@@ -1,15 +1,18 @@
 //
-//  WBAutoTagListView.h
+//  TableViewCell.h
 //  WBAutoTagListViewDemo
 //
-//  Created by wenbo on 2018/6/6.
+//  Created by 文波 on 2018/6/6.
 //  Copyright © 2018年 wenbo. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "WBTagListItem.h"
+#import "Masonry.h"
+
 @class WBTagListModel;
 
-@interface WBAutoTagListView : UIView
+@interface WBTagListViewCell : UITableViewCell
 
 /** < 数据源 > */
 @property (nonatomic, strong) NSArray <WBTagListModel *>*items;
@@ -49,9 +52,10 @@
 
 @end
 
-//@interface WBTagListModel : NSObject
-//
-//@property (nonatomic, copy) NSString *title;
-//@property (nonatomic, assign) BOOL isSelected;
-//
-//@end
+@interface WBTagListModel : NSObject
+
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, assign) BOOL isSelected;
+
+@end
+

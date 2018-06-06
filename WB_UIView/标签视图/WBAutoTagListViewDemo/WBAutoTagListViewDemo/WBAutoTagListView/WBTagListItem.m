@@ -10,9 +10,7 @@
 #import "Masonry.h"
 
 @interface WBTagListItem ()
-{
-    UIButton *tempBtn;
-}
+
 @property (nonatomic, strong) UIButton *tagBtn;
 
 @end
@@ -20,20 +18,9 @@
 @implementation WBTagListItem
 
 #pragma mark < 初始化 >
-//- (instancetype)init
-//{
-//    self = [super init];
-//    if (self) {
-//        [self initDataSource];
-//        [self initSubviews];
-//        [self configLayout];
-//    }
-//    return self;
-//}
-
-- (instancetype)initWithFrame:(CGRect)frame
+- (instancetype)init
 {
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self) {
         [self initDataSource];
         [self initSubviews];
@@ -41,6 +28,17 @@
     }
     return self;
 }
+
+//- (instancetype)initWithFrame:(CGRect)frame
+//{
+//    self = [super initWithFrame:frame];
+//    if (self) {
+//        [self initDataSource];
+//        [self initSubviews];
+//        [self configLayout];
+//    }
+//    return self;
+//}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -58,7 +56,7 @@
     _titleSelectedColor = [UIColor lightGrayColor];
     _borderWidth = 0.f;
     _bgColor = [UIColor whiteColor];
-    _leftMargin = 10.f;
+    _leftRightMargin = 10.f;
     _cornerRadius = 0.f;
     _isSelected = NO;
 }
@@ -69,7 +67,7 @@
 
 - (void)configLayout {
     [self.tagBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self);
+        make.edges.mas_equalTo(self);
     }];
 }
 
@@ -79,16 +77,16 @@
     
     if (_borderWidth > 0) {
         self.tagBtn.layer.borderWidth = _borderWidth;
-        self.tagBtn.layer.borderColor = _borderColor ? _borderColor.CGColor : [UIColor darkGrayColor].CGColor;
         self.tagBtn.layer.masksToBounds = YES;
         self.tagBtn.layer.cornerRadius = _cornerRadius;
+        [self changeBorderColorWithState:_isSelected];
     }
 }
 
 #pragma mark < Event Response >
 - (void)tagBtnClicked:(UIButton *)sender {
-    if (_delegate && [_delegate respondsToSelector:@selector(wbtagListItem:tagClicked:)]) {
-        [_delegate wbtagListItem:self tagClicked:sender];
+    if (_delegate && [_delegate respondsToSelector:@selector(didClickedItem:)]) {
+        [_delegate didClickedItem:self];
     }
 }
 
@@ -97,7 +95,20 @@
     if (self.title.length == 0) {
         return 0.f;
     }
-    return [self.title boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.tagBtn.titleLabel.font} context:nil].size.width + 0.5f + _leftMargin * 2;
+    return [self.title boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.tagBtn.titleLabel.font} context:nil].size.width + 0.5f + _leftRightMargin * 2;
+}
+
+- (void)changeBorderColorWithState:(BOOL)isSelected {
+    if (_borderWidth == 0.f) return;
+    if (isSelected) {
+        if (_selectedBorderColor) {
+            self.tagBtn.layer.borderColor =_selectedBorderColor.CGColor;
+        }
+    }else {
+        if (_borderColor) {
+            self.tagBtn.layer.borderColor = _borderColor.CGColor;
+        }
+    }
 }
 
 #pragma mark < Getter && Setter >
@@ -110,6 +121,7 @@
         [_tagBtn setTitleColor:_titleSelectedColor forState:UIControlStateSelected];
         _tagBtn.backgroundColor = _bgColor;
         _tagBtn.selected = _isSelected;
+        _tagBtn.adjustsImageWhenHighlighted = NO;
         /** < 按钮标题 > */
 //        [_tagBtn setTitle:@"" forState:UIControlStateNormal];
         /** < 设置图片 > */
@@ -158,6 +170,11 @@
     [self setNeedsLayout];
 }
 
+- (void)setSelectedBorderColor:(UIColor *)selectedBorderColor {
+    _selectedBorderColor = selectedBorderColor;
+    [self setNeedsLayout];
+}
+
 - (void)setBgImageName:(NSString *)bgImageName {
     if (!bgImageName) return;
     _bgImageName = bgImageName;
@@ -176,9 +193,9 @@
     [self.tagBtn setBackgroundColor:bgColor];
 }
 
-- (void)setLeftMargin:(CGFloat)leftMargin {
-    if (_leftMargin == leftMargin) return;
-    _leftMargin = leftMargin;
+- (void)setLeftRightMargin:(CGFloat)leftMargin {
+    if (_leftRightMargin == leftMargin) return;
+    _leftRightMargin = leftMargin;
 }
 
 - (void)setCornerRadius:(CGFloat)cornerRadius {
@@ -188,9 +205,9 @@
 }
 
 - (void)setIsSelected:(BOOL)isSelected {
-    if (_isSelected == isSelected) return;
     _isSelected = isSelected;
     self.tagBtn.selected = isSelected;
+    [self setNeedsLayout];
 }
 
 - (void)setItemTag:(NSInteger)itemTag {

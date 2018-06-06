@@ -27,6 +27,7 @@
 		C279E65520C7B20C0097992D /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C279E64A20C7B20C0097992D /* MASConstraint.m */; };
 		C279E65620C7B20C0097992D /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C279E64C20C7B20C0097992D /* MASViewConstraint.m */; };
 		C279E65720C7B20C0097992D /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = C279E64D20C7B20C0097992D /* MASViewAttribute.m */; };
+		C5C5C9E120C83169000AF753 /* WBTagListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5C9E020C83169000AF753 /* WBTagListViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		C279E64B20C7B20C0097992D /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		C279E64C20C7B20C0097992D /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		C279E64D20C7B20C0097992D /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		C5C5C9DF20C83169000AF753 /* WBTagListViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBTagListViewCell.h; sourceTree = "<group>"; };
+		C5C5C9E020C83169000AF753 /* WBTagListViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBTagListViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,8 @@
 				C279E5FC20C7ACA30097992D /* AppDelegate.m */,
 				C279E5FE20C7ACA30097992D /* ViewController.h */,
 				C279E5FF20C7ACA30097992D /* ViewController.m */,
+				C5C5C9DF20C83169000AF753 /* WBTagListViewCell.h */,
+				C5C5C9E020C83169000AF753 /* WBTagListViewCell.m */,
 				C279E60120C7ACA30097992D /* Main.storyboard */,
 				C279E60420C7ACA50097992D /* Assets.xcassets */,
 				C279E60620C7ACA50097992D /* LaunchScreen.storyboard */,
@@ -361,6 +366,7 @@
 				C279E64F20C7B20C0097992D /* ViewController+MASAdditions.m in Sources */,
 				C279E63320C7AD840097992D /* WBTagListItem.m in Sources */,
 				C279E65620C7B20C0097992D /* MASViewConstraint.m in Sources */,
+				C5C5C9E120C83169000AF753 /* WBTagListViewCell.m in Sources */,
 				C279E64E20C7B20C0097992D /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				C279E65520C7B20C0097992D /* MASConstraint.m in Sources */,
 			);

@@ -1,30 +1,28 @@
 //
-//  WBAutoTagListView.m
+//  TableViewCell.m
 //  WBAutoTagListViewDemo
 //
-//  Created by wenbo on 2018/6/6.
+//  Created by 文波 on 2018/6/6.
 //  Copyright © 2018年 wenbo. All rights reserved.
 //
 
-#import "WBAutoTagListView.h"
-#import "WBTagListItem.h"
-#import "Masonry.h"
+#import "WBTagListViewCell.h"
 
-@interface WBAutoTagListView () <WBTagListItemDelegate>
+@interface WBTagListViewCell () <WBTagListItemDelegate>
 {
     WBTagListItem *_tempItem;
 }
 @property (nonatomic, strong) NSMutableArray <WBTagListItem *>*itemArray;
 
+
 @end
 
-@implementation WBAutoTagListView
+@implementation WBTagListViewCell
 
 #pragma mark < 初始化 >
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
+- (instancetype)initWithStyle:(UITableViewCellStyle)style
+              reuseIdentifier:(NSString *)reuseIdentifier {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self initDataSource];
         [self initSubviews];
         [self configLayout];
@@ -32,27 +30,24 @@
     return self;
 }
 
-//- (instancetype)initWithFrame:(CGRect)frame
-//{
-//    self = [super initWithFrame:frame];
-//    if (self) {
-//        [self initDataSource];
-//        [self initSubviews];
-//        [self configLayout];
-//    }
-//    return self;
-//}
-
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
+    // Initialization code
     [self initDataSource];
     [self initSubviews];
     [self configLayout];
 }
 
-#pragma mark < 数据源 >
+- (void)setSelected:(BOOL)selected
+           animated:(BOOL)animated {
+    [super setSelected:selected
+              animated:animated];
+    
+    // Configure the view for the selected state
+}
 
-#pragma mark < 设置UI >
+#pragma mark < 数据源 >
 - (void)initDataSource {
     _secionInset = UIEdgeInsetsMake(15, 15, 15, 15);
     _minimumLineSpacing = 15;
@@ -62,19 +57,20 @@
     _allowMultipleSelection = NO;
 }
 
+#pragma mark < 初始化UI >
 - (void)initSubviews {
+    /** << init subviews > */
     
 }
 
 - (void)configLayout {
-    
+    /** << Configure layout > */
 }
 
 #pragma mark < Layout >
 - (void)layoutSubviews {
     [super layoutSubviews];
-    
-    CGFloat maxWidth = self.bounds.size.width - _secionInset.left - _secionInset.right;
+    CGFloat maxWidth = self.contentView.bounds.size.width - _secionInset.left - _secionInset.right;
     __block CGFloat rowWidth = 0;
     __block BOOL isNeedChangeLine = YES;
     __block WBTagListItem *lastItem = nil;
@@ -83,7 +79,7 @@
         
         CGFloat titleWidth = obj.titleWidth;
         rowWidth += titleWidth + _minimumInteritemSpacing;
-         /** < 是否需要换行 >  */
+        /** < 是否需要换行 >  */
         if (rowWidth > maxWidth - 2 * _minimumInteritemSpacing) {
             isNeedChangeLine = YES;
             /** < 判断是否超过最大值 >  */
@@ -97,11 +93,11 @@
             /** < 换行 >  */
             if (isNeedChangeLine) {
                 if (!lastItem) {
-                    make.top.equalTo(self.mas_top).offset(_secionInset.top);
+                    make.top.equalTo(self.contentView.mas_top).offset(_secionInset.top);
                 }else {
                     make.top.equalTo(lastItem.mas_bottom).offset(_minimumInteritemSpacing);
                 }
-                make.left.equalTo(self.mas_left).offset(_secionInset.left);
+                make.left.equalTo(self.contentView.mas_left).offset(_secionInset.left);
                 isNeedChangeLine = NO;
             }else {
                 make.left.equalTo(lastItem.mas_right).offset(_minimumInteritemSpacing);
@@ -112,35 +108,16 @@
             
             /** < 最后一个 >  */
             if (idx == count - 1) {
-                make.bottom.mas_offset(-_secionInset.bottom).priorityMedium();
+                make.bottom.equalTo(self.contentView.mas_bottom).offset(-_secionInset.bottom).priorityMedium();
             }
         }];
         lastItem = obj;
     }];
-    NSLog(@"%f",[self systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height);
 }
 
 #pragma mark < Event Response >
 
-#pragma mark < Private Method >
-- (void)createTagWithData:(NSArray <WBTagListModel *>*)itemsArray {
-    for (UIView *view in self.itemArray) {
-        [view removeFromSuperview];
-    }
-    [self.itemArray removeAllObjects];
-    
-    for (NSInteger index = 0; index < itemsArray.count; index ++) {
-        WBTagListItem *item = [WBTagListItem new];
-//        item.title = itemsArray[index].title;
-//        item.isSelected = itemsArray[index].isSelected;
-        item.itemTag = index;
-        item.delegate = self;
-        [self addSubview:item];
-        [self.itemArray addObject:item];
-    }
-}
-
-#pragma mark < WBTagListItem >
+#pragma mark < WBTagListItemDelegate >
 - (void)didClickedItem:(WBTagListItem *)item {
     if (!_allowSelection) return;
     /** < 多选 > */
@@ -161,6 +138,24 @@
     }
 }
 
+#pragma mark < Private Method >
+- (void)createTagWithData:(NSArray <WBTagListModel *>*)itemsArray {
+    for (UIView *view in self.itemArray) {
+        [view removeFromSuperview];
+    }
+    [self.itemArray removeAllObjects];
+    
+    for (NSInteger index = 0; index < itemsArray.count; index ++) {
+        WBTagListItem *item = [WBTagListItem new];
+        item.title = itemsArray[index].title;
+        item.isSelected = itemsArray[index].isSelected;
+        item.itemTag = index;
+        item.delegate = self;
+        [self.contentView addSubview:item];
+        [self.itemArray addObject:item];
+    }
+}
+
 #pragma mark < Getter && Setter >
 - (NSMutableArray *)itemArray {
     if (!_itemArray) {
@@ -174,8 +169,8 @@
     if (_items == items) {
         /** < 已创建，直接赋值 > */
         [self.itemArray enumerateObjectsUsingBlock:^(WBTagListItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//            obj.title = items[idx].title;
-//            obj.isSelected = items[idx].isSelected;
+            obj.title = items[idx].title;
+            obj.isSelected = items[idx].isSelected;
             [self setNeedsLayout];
         }];
     }else {
@@ -264,17 +259,47 @@
     }];
 }
 
-/*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect {
- // Drawing code
- }
- */
+//- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+//    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+//
+//    }
+//    return self;
+//}
+//
+////- (void)configData:(NSArray *)dataArray {
+////    _itemView.items = dataArray;
+////    _itemView.itemHeight = 35;
+////    _itemView.leftRightMargin = 35;
+////    _itemView.titleColor = [UIColor orangeColor];
+////    _itemView.titleSelectedColor = [UIColor yellowColor];
+////    _itemView.borderWidth = 1;
+////    _itemView.cornerRadius = 3.f;
+////    _itemView.borderColor = [UIColor lightGrayColor];
+////    _itemView.selectedBorderColor = [UIColor orangeColor];
+////    _itemView.font = [UIFont systemFontOfSize:20.f];
+////
+////    NSLog(@"CELL = %f",[_itemView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height);
+////}
+//
+//- (void)layoutSubviews {
+//    [super layoutSubviews];
+//    NSLog(@"CELLLayout = %f",[_itemView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height);
+//}
+//
+//- (void)awakeFromNib {
+//    [super awakeFromNib];
+//    // Initialization code
+//}
+//
+//- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+//    [super setSelected:selected animated:animated];
+//
+//    // Configure the view for the selected state
+//}
 
 @end
 
-//@implementation WBTagListModel
-//
-//
-//@end
+@implementation WBTagListModel
+
+
+@end

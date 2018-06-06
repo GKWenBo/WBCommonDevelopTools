@@ -11,14 +11,15 @@
 @class WBTagListItem;
 @protocol WBTagListItemDelegate <NSObject>
 
-- (void)wbtagListItem:(WBTagListItem *)item tagClicked:(UIButton *)sender;
+/** < 点击item > */
+- (void)didClickedItem:(WBTagListItem *)item;
 
 @end
 
 @interface WBTagListItem : UIView
 
 /** < 左右间距 默认：10.f > */
-@property (nonatomic, assign) CGFloat leftMargin;
+@property (nonatomic, assign) CGFloat leftRightMargin;
 /** < 标题 > */
 @property (nonatomic, copy) NSString *title;
 /** < 标记 > */
@@ -39,6 +40,8 @@
 @property (nonatomic, assign) CGFloat borderWidth;
 /** < 边框颜色 bodoerWidth > 0 设置有效 > */
 @property (nonatomic, strong) UIColor *borderColor;
+/** < 选中边框颜色 bodoerWidth > 0 设置有效 > */
+@property (nonatomic, strong) UIColor *selectedBorderColor;
 /** < 圆角大小 默认：0 > */
 @property (nonatomic, assign) CGFloat cornerRadius;
 /** < 是否选中 默认：NO > */

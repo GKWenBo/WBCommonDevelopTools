@@ -99,7 +99,7 @@
                 if (!lastItem) {
                     make.top.equalTo(self.mas_top).offset(_secionInset.top);
                 }else {
-                    make.top.equalTo(lastItem.mas_bottom).offset(_minimumInteritemSpacing);
+                    make.top.equalTo(lastItem.mas_bottom).offset(_minimumLineSpacing);
                 }
                 make.left.equalTo(self.mas_left).offset(_secionInset.left);
                 isNeedChangeLine = NO;
@@ -131,12 +131,19 @@
     
     for (NSInteger index = 0; index < itemsArray.count; index ++) {
         WBTagListItem *item = [WBTagListItem new];
-//        item.title = itemsArray[index].title;
-//        item.isSelected = itemsArray[index].isSelected;
+        item.title = itemsArray[index].title;
+        item.isSelected = itemsArray[index].isSelected;
         item.itemTag = index;
         item.delegate = self;
         [self addSubview:item];
         [self.itemArray addObject:item];
+        
+        /** < 默认选中第一个 > */
+        if (index == 0 && itemsArray[index].isSelected) {
+            _tempItem = item;
+            [self.selectedItems removeAllObjects];
+            [self.selectedItems addObject:_tempItem];
+        }
     }
 }
 
@@ -146,16 +153,37 @@
     /** < 多选 > */
     if (_allowMultipleSelection) {
         item.isSelected = !item.isSelected;
+        if (item.isSelected) {
+            [self.selectedItems addObject:_items[item.itemTag]];
+        }else {
+            [self.selectedItems removeObject:_items[item.itemTag]];
+        }
+        
+        if (_delegate && [_delegate respondsToSelector:@selector(wbautoTagListView:selectedItem:deselectedItem:)]) {
+            [_delegate wbautoTagListView:self
+                            selectedItem:item
+                          deselectedItem:nil];
+        }
     }else {
         /** < 单选 > */
         if (_tempItem == nil) {
             item.isSelected = YES;
             _tempItem = item;
+            if (_delegate && [_delegate respondsToSelector:@selector(wbautoTagListView:selectedItem:deselectedItem:)]) {
+                [_delegate wbautoTagListView:self
+                                selectedItem:item
+                              deselectedItem:nil];
+            }
         }else if (_tempItem && _tempItem == item) {
             
         }else if (_tempItem && _tempItem != item) {
             _tempItem.isSelected = NO;
             item.isSelected = YES;
+            if (_delegate && [_delegate respondsToSelector:@selector(wbautoTagListView:selectedItem:deselectedItem:)]) {
+                [_delegate wbautoTagListView:self
+                                selectedItem:item
+                              deselectedItem:_tempItem];
+            }
             _tempItem = item;
         }
     }
@@ -169,13 +197,20 @@
     return _itemArray;
 }
 
+- (NSMutableArray *)selectedItems {
+    if (!_selectedItems) {
+        _selectedItems = @[].mutableCopy;
+    }
+    return _selectedItems;
+}
+
 - (void)setItems:(NSArray<WBTagListModel *> *)items {
     if (items.count == 0) return;
     if (_items == items) {
         /** < 已创建，直接赋值 > */
         [self.itemArray enumerateObjectsUsingBlock:^(WBTagListItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//            obj.title = items[idx].title;
-//            obj.isSelected = items[idx].isSelected;
+            obj.title = items[idx].title;
+            obj.isSelected = items[idx].isSelected;
             [self setNeedsLayout];
         }];
     }else {
@@ -274,7 +309,4 @@
 
 @end
 
-//@implementation WBTagListModel
-//
-//
-//@end
+

@@ -7,6 +7,7 @@
 //
 
 #import "WBTagListViewCell.h"
+#import "Masonry.h"
 
 @interface WBTagListViewCell () <WBTagListItemDelegate>
 {
@@ -70,6 +71,83 @@
 #pragma mark < Layout >
 - (void)layoutSubviews {
     [super layoutSubviews];
+    
+}
+
+#pragma mark < Event Response >
+
+#pragma mark < WBTagListItemDelegate >
+- (void)didClickedItem:(WBTagListItem *)item {
+    if (!_allowSelection) return;
+    /** < 多选 > */
+    if (_allowMultipleSelection) {
+        item.isSelected = !item.isSelected;
+        if (item.isSelected) {
+            [self.selectedItems addObject:_items[item.itemTag]];
+        }else {
+            [self.selectedItems removeObject:_items[item.itemTag]];
+        }
+        if (_delegate && [_delegate respondsToSelector:@selector(wbtagListViewCell:selectedItem:deselectedItem:)]) {
+            [_delegate wbtagListViewCell:self
+                            selectedItem:item
+                          deselectedItem:nil];
+        }
+    }else {
+        /** < 单选 > */
+        if (_tempItem == nil) {
+            item.isSelected = YES;
+            _tempItem = item;
+            if (_delegate && [_delegate respondsToSelector:@selector(wbtagListViewCell:selectedItem:deselectedItem:)]) {
+                [_delegate wbtagListViewCell:self
+                                selectedItem:item
+                              deselectedItem:nil];
+            }
+        }else if (_tempItem && _tempItem == item) {
+            
+        }else if (_tempItem && _tempItem != item) {
+            _tempItem.isSelected = NO;
+            item.isSelected = YES;
+            if (_delegate && [_delegate respondsToSelector:@selector(wbtagListViewCell:selectedItem:deselectedItem:)]) {
+                [_delegate wbtagListViewCell:self
+                                selectedItem:item
+                              deselectedItem:_tempItem];
+            }
+            _tempItem = item;
+            [self.selectedItems removeAllObjects];
+            [self.selectedItems addObject:_items[_tempItem.itemTag]];
+        }
+    }
+}
+
+#pragma mark < Private Method >
+- (void)createTagWithData:(NSArray <WBTagListModel *>*)itemsArray {
+    for (UIView *view in self.itemArray) {
+        [view removeFromSuperview];
+    }
+    [self.itemArray removeAllObjects];
+    
+    for (NSInteger index = 0; index < itemsArray.count; index ++) {
+        WBTagListItem *item = [WBTagListItem new];
+        item.title = itemsArray[index].title;
+        item.isSelected = itemsArray[index].isSelected;
+        item.itemTag = index;
+        item.delegate = self;
+        [self.contentView addSubview:item];
+        [self.itemArray addObject:item];
+        
+        /** < 默认选中第一个 > */
+        if (index == 0 && itemsArray[index].isSelected) {
+            _tempItem = item;
+            [self.selectedItems removeAllObjects];
+            [self.selectedItems addObject:_tempItem];
+        }
+    }
+    [self setNeedsUpdateConstraints];
+}
+
+- (void)updateConstraints {
+    [super updateConstraints];
+    
     CGFloat maxWidth = self.contentView.bounds.size.width - _secionInset.left - _secionInset.right;
     __block CGFloat rowWidth = 0;
     __block BOOL isNeedChangeLine = YES;
@@ -95,7 +173,7 @@
                 if (!lastItem) {
                     make.top.equalTo(self.contentView.mas_top).offset(_secionInset.top);
                 }else {
-                    make.top.equalTo(lastItem.mas_bottom).offset(_minimumInteritemSpacing);
+                    make.top.equalTo(lastItem.mas_bottom).offset(_minimumLineSpacing);
                 }
                 make.left.equalTo(self.contentView.mas_left).offset(_secionInset.left);
                 isNeedChangeLine = NO;
@@ -115,53 +193,19 @@
     }];
 }
 
-#pragma mark < Event Response >
-
-#pragma mark < WBTagListItemDelegate >
-- (void)didClickedItem:(WBTagListItem *)item {
-    if (!_allowSelection) return;
-    /** < 多选 > */
-    if (_allowMultipleSelection) {
-        item.isSelected = !item.isSelected;
-    }else {
-        /** < 单选 > */
-        if (_tempItem == nil) {
-            item.isSelected = YES;
-            _tempItem = item;
-        }else if (_tempItem && _tempItem == item) {
-            
-        }else if (_tempItem && _tempItem != item) {
-            _tempItem.isSelected = NO;
-            item.isSelected = YES;
-            _tempItem = item;
-        }
-    }
-}
-
-#pragma mark < Private Method >
-- (void)createTagWithData:(NSArray <WBTagListModel *>*)itemsArray {
-    for (UIView *view in self.itemArray) {
-        [view removeFromSuperview];
-    }
-    [self.itemArray removeAllObjects];
-    
-    for (NSInteger index = 0; index < itemsArray.count; index ++) {
-        WBTagListItem *item = [WBTagListItem new];
-        item.title = itemsArray[index].title;
-        item.isSelected = itemsArray[index].isSelected;
-        item.itemTag = index;
-        item.delegate = self;
-        [self.contentView addSubview:item];
-        [self.itemArray addObject:item];
-    }
-}
-
 #pragma mark < Getter && Setter >
 - (NSMutableArray *)itemArray {
     if (!_itemArray) {
         _itemArray = @[].mutableCopy;
     }
     return _itemArray;
+}
+
+- (NSMutableArray *)selectedItems {
+    if (!_selectedItems) {
+        _selectedItems = @[].mutableCopy;
+    }
+    return _selectedItems;
 }
 
 - (void)setItems:(NSArray<WBTagListModel *> *)items {
@@ -171,7 +215,6 @@
         [self.itemArray enumerateObjectsUsingBlock:^(WBTagListItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             obj.title = items[idx].title;
             obj.isSelected = items[idx].isSelected;
-            [self setNeedsLayout];
         }];
     }else {
         [self createTagWithData:items];
@@ -258,44 +301,6 @@
         obj.selectedBorderColor = selectedBorderColor;
     }];
 }
-
-//- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-//    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-//
-//    }
-//    return self;
-//}
-//
-////- (void)configData:(NSArray *)dataArray {
-////    _itemView.items = dataArray;
-////    _itemView.itemHeight = 35;
-////    _itemView.leftRightMargin = 35;
-////    _itemView.titleColor = [UIColor orangeColor];
-////    _itemView.titleSelectedColor = [UIColor yellowColor];
-////    _itemView.borderWidth = 1;
-////    _itemView.cornerRadius = 3.f;
-////    _itemView.borderColor = [UIColor lightGrayColor];
-////    _itemView.selectedBorderColor = [UIColor orangeColor];
-////    _itemView.font = [UIFont systemFontOfSize:20.f];
-////
-////    NSLog(@"CELL = %f",[_itemView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height);
-////}
-//
-//- (void)layoutSubviews {
-//    [super layoutSubviews];
-//    NSLog(@"CELLLayout = %f",[_itemView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height);
-//}
-//
-//- (void)awakeFromNib {
-//    [super awakeFromNib];
-//    // Initialization code
-//}
-//
-//- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-//    [super setSelected:selected animated:animated];
-//
-//    // Configure the view for the selected state
-//}
 
 @end
 

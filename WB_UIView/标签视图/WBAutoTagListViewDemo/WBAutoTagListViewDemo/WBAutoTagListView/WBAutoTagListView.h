@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-@class WBTagListModel;
+#import "WBTagListViewCell.h"
+@class WBAutoTagListView;
+
+@protocol WBAutoTagListViewDelegate <NSObject>
+
+- (void)wbautoTagListView:(WBAutoTagListView *)tagView
+             selectedItem:(WBTagListItem *)item
+           deselectedItem:(WBTagListItem *)deselectedItem;
+
+@end
 
 @interface WBAutoTagListView : UIView
 
@@ -46,12 +55,10 @@
 @property (nonatomic, strong) UIColor *selectedBorderColor;
 /** < 圆角大小 默认：0 > */
 @property (nonatomic, assign) CGFloat cornerRadius;
+/** < 选中的item > */
+@property (nonatomic, strong) NSMutableArray *selectedItems;
+
+@property (nonatomic, weak) id <WBAutoTagListViewDelegate> delegate;
 
 @end
 
-//@interface WBTagListModel : NSObject
-//
-//@property (nonatomic, copy) NSString *title;
-//@property (nonatomic, assign) BOOL isSelected;
-//
-//@end

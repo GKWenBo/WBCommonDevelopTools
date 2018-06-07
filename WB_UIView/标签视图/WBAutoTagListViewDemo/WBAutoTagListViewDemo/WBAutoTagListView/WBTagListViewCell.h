@@ -8,9 +8,24 @@
 
 #import <UIKit/UIKit.h>
 #import "WBTagListItem.h"
-#import "Masonry.h"
 
 @class WBTagListModel;
+@class WBTagListViewCell;
+
+@protocol WBTagListViewCellDelegate <NSObject>
+
+/**
+ 点击item回调，用于解决cell复用，更新数据源
+
+ @param cell WBTagListViewCell
+ @param item 当前点击item
+ @param deselectedItem 单选取消选中item
+ */
+- (void)wbtagListViewCell:(WBTagListViewCell *)cell
+             selectedItem:(WBTagListItem *)item
+           deselectedItem:(WBTagListItem *)deselectedItem;
+
+@end
 
 @interface WBTagListViewCell : UITableViewCell
 
@@ -49,6 +64,10 @@
 @property (nonatomic, strong) UIColor *selectedBorderColor;
 /** < 圆角大小 默认：0 > */
 @property (nonatomic, assign) CGFloat cornerRadius;
+/** < 选中的item > */
+@property (nonatomic, strong) NSMutableArray *selectedItems;
+
+@property (nonatomic, weak) id <WBTagListViewCellDelegate> delegate;
 
 @end
 

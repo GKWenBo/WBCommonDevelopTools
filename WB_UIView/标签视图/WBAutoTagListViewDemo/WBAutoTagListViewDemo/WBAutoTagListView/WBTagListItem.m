@@ -117,8 +117,10 @@
         _tagBtn = [UIButton buttonWithType: UIButtonTypeCustom];
         _tagBtn.titleLabel.font = _font;
         /** < 设置按钮颜色 > */
-        [_tagBtn setTitleColor:_titleColor forState:UIControlStateNormal];
-        [_tagBtn setTitleColor:_titleSelectedColor forState:UIControlStateSelected];
+        [_tagBtn setTitleColor:_titleColor
+                      forState:UIControlStateNormal];
+        [_tagBtn setTitleColor:_titleSelectedColor
+                      forState:UIControlStateSelected];
         _tagBtn.backgroundColor = _bgColor;
         _tagBtn.selected = _isSelected;
         _tagBtn.adjustsImageWhenHighlighted = NO;
@@ -126,7 +128,9 @@
 //        [_tagBtn setTitle:@"" forState:UIControlStateNormal];
         /** < 设置图片 > */
 //        [_tagBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-        [_tagBtn addTarget:self action:@selector(tagBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [_tagBtn addTarget:self
+                    action:@selector(tagBtnClicked:)
+          forControlEvents:UIControlEventTouchUpInside];
     }
     return _tagBtn;
 }
@@ -144,19 +148,22 @@
 - (void)setTitle:(NSString *)title {
     if (!title) return;
     _title = title;
-    [self.tagBtn setTitle:title forState:UIControlStateNormal];
+    [self.tagBtn setTitle:title
+                 forState:UIControlStateNormal];
 }
 
 - (void)setTitleColor:(UIColor *)titleColor {
     if (_titleColor == titleColor) return;
     _titleColor = titleColor;
-    [self.tagBtn setTitleColor:titleColor forState:UIControlStateNormal];
+    [self.tagBtn setTitleColor:titleColor
+                      forState:UIControlStateNormal];
 }
 
 - (void)setTitleSelectedColor:(UIColor *)titleSelectedColor {
     if (_titleSelectedColor == titleSelectedColor) return;
     _titleSelectedColor = titleSelectedColor;
-    [self.tagBtn setTitleColor:titleSelectedColor forState:UIControlStateSelected];
+    [self.tagBtn setTitleColor:titleSelectedColor
+                      forState:UIControlStateSelected];
 }
 
 - (void)setBorderWidth:(CGFloat)borderWidth {
@@ -178,13 +185,15 @@
 - (void)setBgImageName:(NSString *)bgImageName {
     if (!bgImageName) return;
     _bgImageName = bgImageName;
-    [self.tagBtn setImage:[UIImage imageNamed:bgImageName] forState:UIControlStateNormal];
+    [self.tagBtn setImage:[UIImage imageNamed:bgImageName]
+                 forState:UIControlStateNormal];
 }
 
 - (void)setSelectedBgImageName:(NSString *)selectedBgImageName {
     if (!selectedBgImageName) return;
     _selectedBgImageName = selectedBgImageName;
-    [self.tagBtn setImage:[UIImage imageNamed:selectedBgImageName] forState:UIControlStateSelected];
+    [self.tagBtn setImage:[UIImage imageNamed:selectedBgImageName]
+                 forState:UIControlStateSelected];
 }
 
 - (void)setBgColor:(UIColor *)bgColor {

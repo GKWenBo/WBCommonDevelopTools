@@ -57,8 +57,17 @@ typedef NS_ENUM(NSInteger, WBDirectoryType) {
  */
 - (void)wb_asyncClearFileAtPath:(NSString *)path;
 
+
 /**
- 移除指定文件路径文件
+ 删除文件
+
+ @param path 文件路径
+ @return YES/NO.
+ */
+- (BOOL)wb_syncRemoveFileAtPath:(NSString *)path;
+
+/**
+ 异步移除指定文件路径文件
 
  @param path 文件路径
  @param completed 回调
@@ -66,7 +75,28 @@ typedef NS_ENUM(NSInteger, WBDirectoryType) {
 - (void)wb_asycnRemoveFileAtPath:(NSString *)path
                        completed:(void (^) (BOOL success))completed;
 
-//// MARK:文件存储
+/**
+ 复制文件
+
+ @param filePath 源文件路径
+ @param toPath 目标路径
+ @return YES/NO.
+ */
+- (BOOL)wb_copyFilePath:(NSString *)filePath
+                 toPath:(NSString *)toPath;
+
+/**
+ 剪切文件
+
+ @param file 源文件路径
+ @param toPath 目标路径
+ @return YES/NO.
+ */
+- (BOOL)wb_cutFile:(NSString *)file
+            toPath:(NSString *)toPath;
+
+
+// MARK:NSPropertyListSerialization
 /**
  同步存储NSArray、NSDictionary数据(NSPropertyListBinaryFormat_v1_0)
 
@@ -75,8 +105,17 @@ typedef NS_ENUM(NSInteger, WBDirectoryType) {
  @param directoryType 目录类型
  */
 - (void)wb_syncWritePlist:(id)plist
-                   toFile:(NSString *)fileName
+               toFileName:(NSString *)fileName
             directoryType:(WBDirectoryType)directoryType;
+
+
+/**
+ 创建文件路径
+
+ @param filePath 文件路径
+ @return YES/NO.
+ */
+- (BOOL)wb_createFilePathIfNecessary:(NSString *)filePath;
 
 /**
  异步存储NSArray、NSDictionary数据(NSPropertyListBinaryFormat_v1_0)，线程安全
@@ -87,85 +126,77 @@ typedef NS_ENUM(NSInteger, WBDirectoryType) {
  @param completed 结果回调
  */
 - (void)wb_asyncWritePlist:(id)plist
-                    toFile:(NSString *)fileName
+                toFileName:(NSString *)fileName
              directoryType:(WBDirectoryType)directoryType
                  completed:(void (^) (BOOL success))completed;
 
 /**
- 同步获取数据
+ 同步读取数据
 
  @param fileName 文件名
  @param directoryType 目录类型
  @return NSArray、NSDictionary
  */
-- (id)wb_syncReadPlistWithFile:(NSString *)fileName
-                 directoryType:(WBDirectoryType)directoryType;
+- (id)wb_syncReadPlistWithFileName:(NSString *)fileName
+                     directoryType:(WBDirectoryType)directoryType;
 
-///**
-// *  存储数组到沙盒
-// *
-// *  @param array 要存储的数组
-// *  @param fileName 文件名
-// *  @param filePath 文件路径
-// */
-//- (void)wb_saveDictArray:(NSArray *)array
-//            fileName:(NSString *)fileName
-//            filePath:(NSString *)filePath;
-///**
-// *  存储数组到cache目录
-// *
-// *  @param array 要存储的数组
-// *  @param fileName 文件名
-// */
-//- (void)wb_saveDictArrayToCachePathWithArray:(NSArray *)array
-//                                    fileName:(NSString *)fileName;
-///**
-// *  从沙盒读取数组
-// *
-// *  @param fileName 文件名
-// *  @param filePath 文件路径
-// */
-//- (NSArray *)wb_getDictArrayWithFileName:(NSString *)fileName
-//                       filePath:(NSString *)filePath;
-///**
-// *  从cache目录读取数组
-// *
-// *  @param fileName 文件名
-// */
-//- (NSArray *)wb_getDictArrayFromCachePath:(NSString *)fileName;
-//
-///**
-// *  保存字典到沙盒
-// *
-// *  @param dict 字典
-// *  @param fileName 文件名
-// *  @param filePath 路径
-// */
-//- (void)wb_saveDict:(NSDictionary *)dict
-//           fileName:(NSString *)fileName
-//           filePath:(NSString *)filePath;
-///**
-// *  保存字典到cache
-// *
-// *  @param dict 字典
-// *  @param fileName 文件名
-// */
-//- (void)wb_saveDictToCachePathWithDict:(NSDictionary *)dict
-//                              fileName:(NSString *)fileName;
-///**
-// *  从沙盒读取字典
-// *
-// *  @param fileName 文件名
-// *  @param filePath 路径
-// */
-//- (NSDictionary *)wb_getDictWithFileName:(NSString *)fileName
-//                                filePath:(NSString *)filePath;
-///**
-// *  从cache读取字典
-// *
-// *  @param fileName 文件名
-// */
-//- (NSDictionary *)wb_getDictFromCachePath:(NSString *)fileName;
+/**
+ 异步读取数据
+
+ @param fileName 文件名
+ @param directoryType 目录类型
+ @param completed 完成回调
+ */
+- (void)wb_asyncReadPlistWithFileName:(NSString *)fileName
+                      directoryType:(WBDirectoryType)directoryType
+                          completed:(void (^) (id plist))completed;
+
+
+// MARK:NSCoder
+/**
+ 同步归档数据
+
+ @param rootObject 模型对象
+ @param fileName 文件名
+ @param directoryType 目录
+ @return YES/NO.
+ */
+- (BOOL)wb_syncArchiveRootObject:(id)rootObject
+                      toFileName:(NSString *)fileName
+                   directoryType:(WBDirectoryType)directoryType;
+/**
+ 异步归档数据
+ 
+ @param rootObject 模型对象
+ @param fileName 文件名
+ @param directoryType 目录
+ @param completed 结果回调
+ */
+- (void)wb_asyncArchiveRootObject:(id)rootObject
+                       toFileName:(NSString *)fileName
+                    directoryType:(WBDirectoryType)directoryType
+                        completed:(void (^) (BOOL success))completed;
+
+/**
+ 同步解档数据
+
+ @param fileName 文件名
+ @param directoryType 目录
+ */
+- (id)wb_syncUnarchiveObjectWithFileName:(NSString *)fileName
+                           directoryType:(WBDirectoryType)directoryType;
+
+/**
+ 异步解档数据
+
+ @param fileName 文件名
+ @param directoryType 目录
+ @param completed 完成回调
+ */
+- (void)wb_asyncUnarchiveObjectWithFileName:(NSString *)fileName
+                              directoryType:(WBDirectoryType)directoryType
+                                  completed:(void (^) (id rootObject))completed;
+
 
 // MARK:文件判断
 /**

@@ -11,6 +11,8 @@
 
 @interface ViewController ()
 
+// MARK:<#MARK#>
+
 @end
 
 @implementation ViewController
@@ -42,10 +44,10 @@
     NSArray *array = @[@"1",@"2",@"3"];
     
     [kWBFileManager wb_syncWritePlist:array
-                               toFile:@"test"
+                               toFileName:@"test"
                         directoryType:WBDirectoryCacheType];
     
-    id data = [kWBFileManager wb_syncReadPlistWithFile:@"test"
+    id data = [kWBFileManager wb_syncReadPlistWithFileName:@"test"
                                          directoryType:WBDirectoryCacheType];
     
     NSLog(@"%@",data);

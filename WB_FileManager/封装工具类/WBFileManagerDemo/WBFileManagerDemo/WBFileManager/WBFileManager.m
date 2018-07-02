@@ -80,7 +80,7 @@ static dispatch_queue_t _concurrentQueue;
 }
 
 /** < 清理缓存 && 文件操作 > */
-- (void)wb_clearCacheDirFile {
+- (void)wb_asyncClearCacheDirFile {
     return [self wb_asyncClearFileAtPath:[self wb_getCacheDirPath]];
 }
 

@@ -46,9 +46,9 @@ typedef NS_ENUM(NSInteger, WBDirectoryType) {
 
 // MARK:清理缓存 && 文件操作
 /**
- *  清理cache缓存
+ *  异步清理cache缓存
  */
-- (void)wb_clearCacheDirFile;
+- (void)wb_asyncClearCacheDirFile;
 
 /**
  *  异步清理指定路径文件夹文件

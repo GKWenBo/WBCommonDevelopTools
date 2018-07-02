@@ -84,6 +84,12 @@ static dispatch_queue_t _concurrentQueue;
     return [self wb_asyncClearFileAtPath:[self wb_getCacheDirPath]];
 }
 
+- (BOOL)wb_syncRemoveFileAtPath:(NSString *)path {
+    if (![[NSFileManager defaultManager] fileExistsAtPath:path]) return NO;
+    return [[NSFileManager defaultManager] removeItemAtPath:path
+                                                      error:nil];
+}
+
 - (void)wb_asyncClearFileAtPath:(NSString *)path {
     if (!path) return;
     
@@ -124,6 +130,31 @@ static dispatch_queue_t _concurrentQueue;
     }
 }
 
+- (BOOL)wb_copyFilePath:(NSString *)filePath
+                 toPath:(NSString *)toPath {
+    if (![self wb_isFileExistAtPath:filePath]) return NO;
+    return [[NSFileManager defaultManager] copyItemAtPath:filePath
+                                                   toPath:toPath
+                                                    error:nil];
+}
+
+- (BOOL)wb_cutFile:(NSString *)file
+            toPath:(NSString *)toPath {
+    if (![self wb_isFileExistAtPath:file]) return NO;
+    return [[NSFileManager defaultManager] moveItemAtPath:file
+                                                   toPath:toPath
+                                                    error:nil];
+}
+
+- (BOOL)wb_createFilePathIfNecessary:(NSString *)filePath {
+    if (![self wb_isFileExistAtPath:filePath]) {
+        return [[NSFileManager defaultManager] createFileAtPath:filePath
+                                                       contents:nil
+                                                     attributes:nil];
+    }
+    return YES;
+}
+
 #pragma mark -- 获取文件路径
 - (NSString *)wb_getDocumentDirPath {
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
@@ -135,7 +166,7 @@ static dispatch_queue_t _concurrentQueue;
 
 // MARK: 文件存储
 - (void)wb_syncWritePlist:(id)plist
-                   toFile:(NSString *)fileName
+               toFileName:(NSString *)fileName
             directoryType:(WBDirectoryType)directoryType {
     if (![NSPropertyListSerialization propertyList:plist isValidForFormat:NSPropertyListBinaryFormat_v1_0]) {
         NSLog(@"不能转为二进制数据，请检查数据");
@@ -167,7 +198,7 @@ static dispatch_queue_t _concurrentQueue;
 }
 
 - (void)wb_asyncWritePlist:(id)plist
-                    toFile:(NSString *)fileName
+                toFileName:(NSString *)fileName
              directoryType:(WBDirectoryType)directoryType
                  completed:(void (^) (BOOL success))completed {
     if (![NSPropertyListSerialization propertyList:plist isValidForFormat:NSPropertyListBinaryFormat_v1_0]) {
@@ -191,12 +222,15 @@ static dispatch_queue_t _concurrentQueue;
     dispatch_barrier_async([self concurrentQueue], ^{
         BOOL res = [data writeToFile:filePath
                           atomically:YES];
-        completed(res);
+        
+        if (completed) {
+            completed(res);
+        }
     });
 }
 
-- (id)wb_syncReadPlistWithFile:(NSString *)fileName
-                 directoryType:(WBDirectoryType)directoryType {
+- (id)wb_syncReadPlistWithFileName:(NSString *)fileName
+                     directoryType:(WBDirectoryType)directoryType {
     NSString *filePath = [[self wb_getDirPath:directoryType] stringByAppendingPathComponent:fileName];
     
     NSError *error;
@@ -218,115 +252,84 @@ static dispatch_queue_t _concurrentQueue;
     return plist;
 }
 
-//#pragma mark -- 文件存储
-//- (void)wb_saveDictArray:(NSArray *)array
-//                fileName:(NSString *)fileName
-//                filePath:(NSString *)filePath {
-//    NSAssert(fileName || filePath, @"请设置文件名或文件路径");
-//    NSString * fullPath = [filePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.plist",fileName]];
-//    NSArray * tempArray = nil;
-//    NSMutableArray * mutableArray = nil;
-//    NSFileManager *fileManager = [NSFileManager defaultManager];
-//    /**  判断文件是否存在 不存在则创建 存在则读取  */
-//    if ([fileManager fileExistsAtPath:fullPath]) {
-//        tempArray = [NSArray arrayWithContentsOfFile:fullPath];
-//        mutableArray = [NSMutableArray arrayWithArray:tempArray];
-//    }else {
-//        mutableArray = @[].mutableCopy;
-//    }
-//    for (id dict in array) {
-//        if ([dict isKindOfClass:[NSDictionary class]] || [dict isKindOfClass:[NSMutableDictionary class]]) {
-//
-//            NSMutableDictionary * tempDict = [NSMutableDictionary dictionaryWithDictionary:dict];
-//            /**  排除key为nsnull  */
-//            for (NSString * key in tempDict.allKeys) {
-//                if (tempDict[key] == [NSNull null]) {
-//                    [tempDict setValue:@"" forKey:key];
-//                }
-//            }
-//            [mutableArray addObject:tempDict];
-//        }else {
-//            NSAssert([dict isKindOfClass:[NSDictionary class]] || [dict isKindOfClass:[NSMutableDictionary class]], @"请存储字典对象");
-//        }
-//    }
-//    if ([mutableArray writeToFile:fullPath atomically:YES]) {
-//         NSLog(@"属性列表存储数据成功");
-//
-//    }else {
-//         NSLog(@"属性列表存储数据失败");
-//    }
-//}
-//
-//- (void)wb_saveDictArrayToCachePathWithArray:(NSArray *)array
-//                                    fileName:(NSString *)fileName {
-//    [self wb_saveDictArray:array fileName:fileName filePath:[self wb_getCacheDirPath]];
-//}
-//
-//- (NSArray *)wb_getDictArrayWithFileName:(NSString *)fileName filePath:(NSString *)filePath {
-//    NSAssert(fileName || filePath, @"请设置文件名或文件路径");
-//    NSString * fullPath = [filePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.plist",fileName]];
-//    NSArray * tempArray = nil;
-//    NSFileManager *fileManager = [NSFileManager defaultManager];
-//    if ([fileManager fileExistsAtPath:fullPath]) {
-//        NSLog(@"获取文件成功");
-//        tempArray = [NSArray arrayWithContentsOfFile:fullPath];
-//    }else {
-//        NSLog(@"文件不存在");
-//    }
-//    return tempArray;
-//}
-//
-//- (NSArray *)wb_getDictArrayFromCachePath:(NSString *)fileName {
-//    return [self wb_getDictArrayWithFileName:fileName filePath:[self wb_getCacheDirPath]];
-//}
-//
-//- (void)wb_saveDict:(NSDictionary *)dict
-//           fileName:(NSString *)fileName
-//           filePath:(NSString *)filePath {
-//     NSAssert(fileName || filePath, @"请设置文件名或文件路径");
-//     NSString * fullPath = [filePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.plist",fileName]];
-//    NSDictionary * tempDict = nil;
-//    NSMutableDictionary * mutableDict = nil;
-//    NSFileManager *fileManager = [NSFileManager defaultManager];
-//    if ([fileManager fileExistsAtPath:fullPath]) {
-//        tempDict = [NSDictionary dictionaryWithContentsOfFile:fullPath];
-//    }else {
-//        mutableDict = @{}.mutableCopy;
-//    }
-//    for (NSString * key in dict) {
-//        if (dict[key] == [NSNull null]) {
-//            [mutableDict setValue:@"" forKey:key];
-//        }
-//    }
-//    if ([mutableDict writeToFile:fullPath atomically:YES]) {
-//        NSLog(@"保存字典失败");
-//    }else {
-//        NSLog(@"保存字典成功");
-//    }
-//}
-//
-//- (void)wb_saveDictToCachePathWithDict:(NSDictionary *)dict fileName:(NSString *)fileName {
-//
-//    [self wb_saveDict:dict fileName:fileName filePath:[self wb_getCacheDirPath]];
-//}
-//- (NSDictionary *)wb_getDictWithFileName:(NSString *)fileName
-//                                filePath:(NSString *)filePath {
-//    NSAssert(fileName || filePath, @"请设置文件名或文件路径");
-//    NSString * fullPath = [filePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.plist",fileName]];
-//    NSDictionary * dict = nil;
-//    NSFileManager *fileManager = [NSFileManager defaultManager];
-//    if ([fileManager fileExistsAtPath:fullPath]) {
-//        dict = [NSDictionary dictionaryWithContentsOfFile:fullPath];
-//        NSLog(@"读取字典文件成功");
-//    }else {
-//        NSLog(@"字典文件路径不存在");
-//    }
-//    return dict;
-//}
+- (void)wb_asyncReadPlistWithFileName:(NSString *)fileName
+                        directoryType:(WBDirectoryType)directoryType
+                            completed:(void (^) (id plist))completed {
+    NSString *filePath = [[self wb_getDirPath:directoryType] stringByAppendingPathComponent:fileName];
+    
+    __block NSError *error;
+    NSData *data = [NSData dataWithContentsOfFile:filePath
+                                          options:NSDataReadingMappedIfSafe
+                                            error:&error];
+    if (!data) {
+        NSLog(@"error reading %@: %@", filePath, error);
+        return ;
+    }
+    
+    dispatch_async([self concurrentQueue], ^{
+        id plist = [NSPropertyListSerialization propertyListWithData:data
+                                                             options:0
+                                                              format:NULL
+                                                               error:&error];
+        if (completed) {
+            completed(plist);
+        }
+    });
+}
 
-//- (NSDictionary *)wb_getDictFromCachePath:(NSString *)fileName {
-//    return [self wb_getDictWithFileName:fileName filePath:[self wb_getCacheDirPath]];
-//}
+// MARK:NSCoder
+- (BOOL)wb_syncArchiveRootObject:(id)rootObject
+                      toFileName:(NSString *)fileName
+                   directoryType:(WBDirectoryType)directoryType {
+    if (!rootObject) return NO;
+    
+    NSString *filePath = [[[self wb_getDirPath:directoryType] stringByAppendingPathComponent:fileName] stringByAppendingString:@".archive"];
+    
+    __block BOOL res = NO;
+    dispatch_barrier_sync([self concurrentQueue], ^{
+       res = [NSKeyedArchiver archiveRootObject:rootObject
+                                         toFile:filePath];
+    });
+    NSLog(@"同步归档%@",res ? @"成功" : @"失败");
+    return res;
+}
+
+- (void)wb_asyncArchiveRootObject:(id)rootObject
+                       toFileName:(NSString *)fileName
+                    directoryType:(WBDirectoryType)directoryType
+                        completed:(void (^) (BOOL success))completed; {
+    if (!rootObject) return ;
+    
+    NSString *filePath = [[[self wb_getDirPath:directoryType] stringByAppendingPathComponent:fileName] stringByAppendingString:@".archive"];
+    dispatch_barrier_async([self concurrentQueue], ^{
+        BOOL res = [NSKeyedArchiver archiveRootObject:rootObject
+                                               toFile:filePath];
+        
+        NSLog(@"异步归档%@",res ? @"成功" : @"失败");
+        
+        if (completed) {
+            completed(res);
+        }
+    });
+}
+
+- (id)wb_syncUnarchiveObjectWithFileName:(NSString *)fileName
+                           directoryType:(WBDirectoryType)directoryType {
+    NSString *filePath = [[[self wb_getDirPath:directoryType] stringByAppendingPathComponent:fileName] stringByAppendingString:@".archive"];
+    return [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+}
+
+- (void)wb_asyncUnarchiveObjectWithFileName:(NSString *)fileName
+                              directoryType:(WBDirectoryType)directoryType
+                                  completed:(void (^) (id rootObject))completed {
+    dispatch_async([self concurrentQueue], ^{
+       id rootObject = [self wb_syncUnarchiveObjectWithFileName:fileName
+                                                  directoryType:directoryType];
+        if (completed) {
+            completed(rootObject);
+        }
+    });
+}
 
 // MARK:文件判断
 - (BOOL)wb_isFileExistAtPath:(NSString *)path {

@@ -1,0 +1,24 @@
+//
+//  WBPrefixHeader.pch
+//  WBAppFrameWorkDemo
+//
+//  Created by WMB on 2017/10/10.
+//  Copyright © 2017年 WMB. All rights reserved.
+//
+
+#ifndef WBPrefixHeader_pch
+#define WBPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "WBMacroDefinition.h"
+
+#import "MJRefresh.h"
+
+/** << 分类 > */
+#import "UIImage+WBEffect.h"
+
+#import "UserInfoModel.h"
+
+#endif /* WBPrefixHeader_pch */

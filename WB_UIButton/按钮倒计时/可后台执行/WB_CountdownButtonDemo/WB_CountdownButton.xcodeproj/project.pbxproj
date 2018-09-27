@@ -14,6 +14,7 @@
 		C2D0DD781EEA960A0023CAB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2D0DD771EEA960A0023CAB7 /* Assets.xcassets */; };
 		C2D0DD7B1EEA960A0023CAB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D0DD791EEA960A0023CAB7 /* LaunchScreen.storyboard */; };
 		C2D0DD8B1EEAA4270023CAB7 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D0DD8A1EEAA4270023CAB7 /* SecondViewController.m */; };
+		D0CDD30C215C8F8B00E5511F /* UIButton+WBCountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CDD30A215C8F8A00E5511F /* UIButton+WBCountDown.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		C2F85F1F1F7794EC00D09554 /* WBCountdownButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBCountdownButton.m; sourceTree = "<group>"; };
 		C2F85F201F7794EC00D09554 /* WBCountdownButtonManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBCountdownButtonManager.h; sourceTree = "<group>"; };
 		C2F85F211F7794EC00D09554 /* WBCountdownButtonManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBCountdownButtonManager.m; sourceTree = "<group>"; };
+		D0CDD30A215C8F8A00E5511F /* UIButton+WBCountDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WBCountDown.m"; sourceTree = "<group>"; };
+		D0CDD30B215C8F8B00E5511F /* UIButton+WBCountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WBCountDown.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 		C2D0DD6A1EEA960A0023CAB7 /* WB_CountdownButton */ = {
 			isa = PBXGroup;
 			children = (
+				D0CDD30B215C8F8B00E5511F /* UIButton+WBCountDown.h */,
+				D0CDD30A215C8F8A00E5511F /* UIButton+WBCountDown.m */,
 				C2F85F1D1F7794EC00D09554 /* WBCountdownButton */,
 				C2D0DD6E1EEA960A0023CAB7 /* AppDelegate.h */,
 				C2D0DD6F1EEA960A0023CAB7 /* AppDelegate.m */,
@@ -175,6 +180,7 @@
 				C2D0DD731EEA960A0023CAB7 /* ViewController.m in Sources */,
 				C2D0DD701EEA960A0023CAB7 /* AppDelegate.m in Sources */,
 				C2D0DD6D1EEA960A0023CAB7 /* main.m in Sources */,
+				D0CDD30C215C8F8B00E5511F /* UIButton+WBCountDown.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

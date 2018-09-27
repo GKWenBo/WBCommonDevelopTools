@@ -57,7 +57,6 @@ typedef NS_ENUM(NSInteger, WBDirectoryType) {
  */
 - (void)wb_asyncClearFileAtPath:(NSString *)path;
 
-
 /**
  删除文件
 
@@ -151,7 +150,6 @@ typedef NS_ENUM(NSInteger, WBDirectoryType) {
                       directoryType:(WBDirectoryType)directoryType
                           completed:(void (^) (id plist))completed;
 
-
 // MARK:NSCoder
 /**
  同步归档数据
@@ -196,7 +194,6 @@ typedef NS_ENUM(NSInteger, WBDirectoryType) {
 - (void)wb_asyncUnarchiveObjectWithFileName:(NSString *)fileName
                               directoryType:(WBDirectoryType)directoryType
                                   completed:(void (^) (id rootObject))completed;
-
 
 // MARK:文件判断
 /**

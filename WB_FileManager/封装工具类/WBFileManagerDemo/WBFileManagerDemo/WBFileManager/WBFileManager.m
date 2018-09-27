@@ -174,7 +174,6 @@ static dispatch_queue_t _concurrentQueue;
     }
     
     NSError *error;
-    
     NSData *data = [NSPropertyListSerialization dataWithPropertyList:plist
                                                               format:NSPropertyListBinaryFormat_v1_0
                                                              options:0
@@ -185,7 +184,8 @@ static dispatch_queue_t _concurrentQueue;
         return;
     }
     
-    NSString *filePath = [[self wb_getDirPath:directoryType] stringByAppendingPathComponent:fileName];
+    NSString *filePath = [[self wb_getDirPath:directoryType]
+                          stringByAppendingPathComponent:fileName];
     
     dispatch_barrier_sync([self concurrentQueue], ^{
        BOOL res = [data writeToFile:filePath
@@ -207,7 +207,6 @@ static dispatch_queue_t _concurrentQueue;
     }
     
     NSError *error;
-    
     NSData *data = [NSPropertyListSerialization dataWithPropertyList:plist
                                                               format:NSPropertyListBinaryFormat_v1_0
                                                              options:0
@@ -282,7 +281,6 @@ static dispatch_queue_t _concurrentQueue;
                       toFileName:(NSString *)fileName
                    directoryType:(WBDirectoryType)directoryType {
     if (!rootObject) return NO;
-    
     NSString *filePath = [[[self wb_getDirPath:directoryType] stringByAppendingPathComponent:fileName] stringByAppendingString:@".archive"];
     
     __block BOOL res = NO;
@@ -290,7 +288,6 @@ static dispatch_queue_t _concurrentQueue;
        res = [NSKeyedArchiver archiveRootObject:rootObject
                                          toFile:filePath];
     });
-    NSLog(@"同步归档%@",res ? @"成功" : @"失败");
     return res;
 }
 
@@ -299,14 +296,10 @@ static dispatch_queue_t _concurrentQueue;
                     directoryType:(WBDirectoryType)directoryType
                         completed:(void (^) (BOOL success))completed; {
     if (!rootObject) return ;
-    
     NSString *filePath = [[[self wb_getDirPath:directoryType] stringByAppendingPathComponent:fileName] stringByAppendingString:@".archive"];
     dispatch_barrier_async([self concurrentQueue], ^{
         BOOL res = [NSKeyedArchiver archiveRootObject:rootObject
                                                toFile:filePath];
-        
-        NSLog(@"异步归档%@",res ? @"成功" : @"失败");
-        
         if (completed) {
             completed(res);
         }
@@ -352,7 +345,7 @@ static dispatch_queue_t _concurrentQueue;
 // MARK:Getter
 - (dispatch_queue_t)concurrentQueue {
     if (!_concurrentQueue) {
-        _concurrentQueue = dispatch_queue_create("com.WBFileManagerConcurrentQueue.info", DISPATCH_QUEUE_CONCURRENT);
+        _concurrentQueue = dispatch_queue_create("com.wbfilemanagerconcurrentQueue.info", DISPATCH_QUEUE_CONCURRENT);
     }
     return _concurrentQueue;
 }

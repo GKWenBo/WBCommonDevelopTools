@@ -55,11 +55,12 @@ static NSString *const kVersionKey = @"version";
     return NO;
 }
 - (void)wb_enterGuideIfNeeded {
-    if ([self needGuide]) {
-        [self wb_enterGuideIfNeeded];
-    }else {
-        [self wb_enterLoginVcIfNeeded];
-    }
+//    if (![self needGuide]) {
+//        [self wb_enterGuideIfNeeded];
+//    }else {
+//        [self wb_enterLoginVcIfNeeded];
+//    }
+    [self wb_enterMainVc];
 }
 
 #pragma mark ------ < Public Method > ------

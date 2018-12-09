@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		84C2A40A1FE3B21A00E16784 /* WBLoadingAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2A4091FE3B21A00E16784 /* WBLoadingAnimationView.m */; };
-		84C2A40E1FE3B24600E16784 /* UIView+WBFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2A40D1FE3B24600E16784 /* UIView+WBFrame.m */; };
 		C20523191F63C3F5000A7F94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C20523181F63C3F5000A7F94 /* main.m */; };
 		C205231C1F63C3F5000A7F94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C205231B1F63C3F5000A7F94 /* AppDelegate.m */; };
 		C205231F1F63C3F5000A7F94 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C205231E1F63C3F5000A7F94 /* ViewController.m */; };
@@ -17,13 +16,12 @@
 		C20523271F63C3F5000A7F94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20523251F63C3F5000A7F94 /* LaunchScreen.storyboard */; };
 		C20853671F63D42300BB43DE /* LoadingViewForOC.m in Sources */ = {isa = PBXBuildFile; fileRef = C20853631F63D42300BB43DE /* LoadingViewForOC.m */; };
 		C20853681F63D42300BB43DE /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C20853651F63D42300BB43DE /* UIView+Extension.m */; };
+		C51FCEDA214D51FD00677FED /* UIView+WBFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C51FCED8214D51FC00677FED /* UIView+WBFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		84C2A4081FE3B21A00E16784 /* WBLoadingAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBLoadingAnimationView.h; sourceTree = "<group>"; };
 		84C2A4091FE3B21A00E16784 /* WBLoadingAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBLoadingAnimationView.m; sourceTree = "<group>"; };
-		84C2A40C1FE3B24600E16784 /* UIView+WBFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WBFrame.h"; sourceTree = "<group>"; };
-		84C2A40D1FE3B24600E16784 /* UIView+WBFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WBFrame.m"; sourceTree = "<group>"; };
 		C20523141F63C3F5000A7F94 /* WB_LoadingAnimationView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WB_LoadingAnimationView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C20523181F63C3F5000A7F94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C205231A1F63C3F5000A7F94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,6 +36,8 @@
 		C20853631F63D42300BB43DE /* LoadingViewForOC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewForOC.m; sourceTree = "<group>"; };
 		C20853641F63D42300BB43DE /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		C20853651F63D42300BB43DE /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		C51FCED8214D51FC00677FED /* UIView+WBFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WBFrame.m"; sourceTree = "<group>"; };
+		C51FCED9214D51FD00677FED /* UIView+WBFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WBFrame.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,20 +54,12 @@
 		84C2A4071FE3B21A00E16784 /* WBLoadingAnimationView */ = {
 			isa = PBXGroup;
 			children = (
+				C51FCED9214D51FD00677FED /* UIView+WBFrame.h */,
+				C51FCED8214D51FC00677FED /* UIView+WBFrame.m */,
 				84C2A4081FE3B21A00E16784 /* WBLoadingAnimationView.h */,
 				84C2A4091FE3B21A00E16784 /* WBLoadingAnimationView.m */,
 			);
 			path = WBLoadingAnimationView;
-			sourceTree = "<group>";
-		};
-		84C2A40B1FE3B24600E16784 /* UIView+WBFrame */ = {
-			isa = PBXGroup;
-			children = (
-				84C2A40C1FE3B24600E16784 /* UIView+WBFrame.h */,
-				84C2A40D1FE3B24600E16784 /* UIView+WBFrame.m */,
-			);
-			name = "UIView+WBFrame";
-			path = "../../../../../WB_UIView/WBCategory/UIView+WBFrame";
 			sourceTree = "<group>";
 		};
 		C205230B1F63C3F5000A7F94 = {
@@ -89,7 +81,6 @@
 		C20523161F63C3F5000A7F94 /* WB_LoadingAnimationView */ = {
 			isa = PBXGroup;
 			children = (
-				84C2A40B1FE3B24600E16784 /* UIView+WBFrame */,
 				84C2A4071FE3B21A00E16784 /* WBLoadingAnimationView */,
 				C205231A1F63C3F5000A7F94 /* AppDelegate.h */,
 				C205231B1F63C3F5000A7F94 /* AppDelegate.m */,
@@ -188,7 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84C2A40E1FE3B24600E16784 /* UIView+WBFrame.m in Sources */,
+				C51FCEDA214D51FD00677FED /* UIView+WBFrame.m in Sources */,
 				C205231F1F63C3F5000A7F94 /* ViewController.m in Sources */,
 				C205231C1F63C3F5000A7F94 /* AppDelegate.m in Sources */,
 				C20523191F63C3F5000A7F94 /* main.m in Sources */,

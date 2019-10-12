@@ -14,6 +14,8 @@
 		C2D0DD781EEA960A0023CAB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2D0DD771EEA960A0023CAB7 /* Assets.xcassets */; };
 		C2D0DD7B1EEA960A0023CAB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D0DD791EEA960A0023CAB7 /* LaunchScreen.storyboard */; };
 		C2D0DD8B1EEAA4270023CAB7 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D0DD8A1EEAA4270023CAB7 /* SecondViewController.m */; };
+		D0350DEB234C58B900E02343 /* WBCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F85F1F1F7794EC00D09554 /* WBCountdownButton.m */; };
+		D0350DEC234C58C700E02343 /* WBCountdownButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F85F211F7794EC00D09554 /* WBCountdownButtonManager.m */; };
 		D0CDD30C215C8F8B00E5511F /* UIButton+WBCountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CDD30A215C8F8A00E5511F /* UIButton+WBCountDown.m */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +147,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -176,6 +179,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0350DEC234C58C700E02343 /* WBCountdownButtonManager.m in Sources */,
+				D0350DEB234C58B900E02343 /* WBCountdownButton.m in Sources */,
 				C2D0DD8B1EEAA4270023CAB7 /* SecondViewController.m in Sources */,
 				C2D0DD731EEA960A0023CAB7 /* ViewController.m in Sources */,
 				C2D0DD701EEA960A0023CAB7 /* AppDelegate.m in Sources */,

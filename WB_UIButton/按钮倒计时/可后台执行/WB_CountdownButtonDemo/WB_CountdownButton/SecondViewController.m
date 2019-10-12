@@ -8,6 +8,7 @@
 
 #import "SecondViewController.h"
 #import "WBCountdownButton.h"
+
 @interface SecondViewController ()
 @property (nonatomic,strong) WBCountdownButton * button1;
 @property (nonatomic,strong) WBCountdownButton * button2;

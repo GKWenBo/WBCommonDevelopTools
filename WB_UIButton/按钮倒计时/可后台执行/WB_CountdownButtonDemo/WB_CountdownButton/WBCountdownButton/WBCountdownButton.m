@@ -104,6 +104,7 @@
     __weak __typeof(self) weakSelf = self;
     [[WBCountdownButtonManager shareManager] scheduledCountDownWithKey:self.identifyKey timeInterval:self.countDownTime countingDown:^(NSTimeInterval leftTimeInterval) {
         
+        
         __strong __typeof(weakSelf) self = weakSelf;
         self.overlayLabel.text = [NSString stringWithFormat:@"%@ 秒后重试", @(leftTimeInterval)];
         

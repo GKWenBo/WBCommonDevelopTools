@@ -60,6 +60,7 @@
         }
     });
     
+    
     if (self.taskIdentifier != UIBackgroundTaskInvalid) {
         [[UIApplication sharedApplication] endBackgroundTask:self.taskIdentifier];
         self.taskIdentifier = UIBackgroundTaskInvalid;

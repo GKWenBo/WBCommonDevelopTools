@@ -77,10 +77,8 @@
             toVC.view.alpha = 0.f;
             // animation
             [UIView animateWithDuration:[self transitionDuration]
-                                  delay:0
-                 usingSpringWithDamping:0.65f
-                  initialSpringVelocity:20.f
-                                options:UIViewAnimationOptionCurveEaseOut
+                                  delay:0.f
+                                options:UIViewAnimationOptionCurveEaseIn
                              animations:^{
                 toVC.view.alpha = 1.f;
                 toVC.view.frame = CGRectMake(0, 0, CGRectGetWidth(containerView.frame), CGRectGetHeight(containerView.frame));
@@ -165,7 +163,7 @@
     if (!_animator) {
         _animator = [[WBTransitionAnimator alloc] initWithTransitionStyle:_style];
         _animator.presentDuration = self.presentDuration;
-        _animator.dismissDuration = self.presentDuration;
+        _animator.dismissDuration = self.dismissDuration;
     }
     return _animator;
 }

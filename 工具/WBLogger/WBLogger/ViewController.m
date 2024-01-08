@@ -7,7 +7,6 @@
 
 #import "ViewController.h"
 #import "WBLogger-Swift.h"
-
 @interface ViewController ()
 
 @end
@@ -17,9 +16,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [WBLogger warning:@"test print log"];
 }
 
+- (void)loggerTest {
+    [WBLogger error:@"error log"];
+    [WBLogger warning:@"warning log"];
+    [WBLogger debug:@"debug log"];
+    [WBLogger info:@"info log"];
+    [WBLogger fault:@"fault log"];
+    [WBLogger notice:@"notice log"];
+    [WBLogger trice:@"trice log"];
+    [WBLogger critical:@"critical log"];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self loggerTest];
+}
 
 @end
